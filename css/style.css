@@ -5,7 +5,7 @@ text-align:center;
 
 div#cabecalho{
 width:69%;
-height: 200px;
+min-height: 130px;
 background: #dddddd;
 box-shadow: 0px 0px 10px rgba(0,0,0,.5);
 font: 10px sans-serif;
