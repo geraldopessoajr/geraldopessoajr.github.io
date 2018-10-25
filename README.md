@@ -1,2 +1,2 @@
-# geraldopessoajr.github.io
+# http://geraldopessoajr.github.io
 Visualização TP2
