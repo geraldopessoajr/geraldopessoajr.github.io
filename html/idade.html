@@ -62,15 +62,15 @@
              {
                  if(idade == 1)
                  {
-		     imprimeGrafico(2, "[0,10] years", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, "[0,10]", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
                  }
                  else if(idade == 2)
                  {
-		     imprimeGrafico(2, "(10,20] years", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, "(10,20]", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
                  }
                  else if(idade == 3)
                  {
-		     imprimeGrafico(2, ">20 years", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, ">20", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
                  }
                  imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
              }
@@ -78,15 +78,15 @@
              {
                  if(idade == 1)
                  {
-		     imprimeGrafico(1, "[0,10] anos", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "[0,10]", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
                  }
                  else if(idade == 2)
                  {
-		     imprimeGrafico(1, "(10,20] anos","Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "(10,20]","Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
                  }
                  else if(idade == 3)
                  {
-		     imprimeGrafico(1, ">20 anos", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, ">20", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
                  }
 		 imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
             }
@@ -447,7 +447,7 @@
 	    .attr("y", 0 - (margin.top / 2))
 	    .attr("text-anchor", "middle")  
 	    .style("font-size", "20px") 
-	    .text(idade);
+	    .text(function(){if(idioma == 1){return idade + " Anos";}else{return idade+" Years"}});
 	}
 	function imprimeLegenda(arquivo, corpo, div)
         {
