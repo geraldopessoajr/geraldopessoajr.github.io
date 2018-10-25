@@ -7,7 +7,7 @@
   <title>Collaborations per Geographical Region</title>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-  <link rel="stylesheet" type="text/css" href="style2.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
 </head>
 <body>
 <!--Div com Cabeçalho-->
@@ -64,58 +64,58 @@
              {
                   if(region == 1)
                   {
-		     imprimeGrafico(2, "Central-West", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(2, "Central-West", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
 
                   }
                   else if(region == 2)
                   {
-		     imprimeGrafico(2, "North", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(2, "North", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
 
                   }
                   else if(region == 3)
                   {
-		     imprimeGrafico(2, "Northeast", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(2, "Northeast", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
 
                   }
                   else if(region == 4)
                   {
-		     imprimeGrafico(2, "South", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(2, "South", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
 
                   }
                   else if(region == 5)
                   {
-		     imprimeGrafico(2, "Southeast", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(2, "Southeast", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
 
                   }
-		  imprimeLegenda("files/region"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
+		  imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
              }
              else if(idioma == 1)
              {
                   if(region == 1)
                   {
-		     imprimeGrafico(1, "Centro-Oeste", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "Centro-Oeste", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
                   }
                   else if(region == 2)
                   {
-		     imprimeGrafico(1, "Nordeste", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "Nordeste", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
                   }
                   else if(region == 3)
                   {
-		     imprimeGrafico(1, "Norte", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "Norte", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
                   }
                   else if(region == 4)
                   {
-		     imprimeGrafico(1, "Sudeste", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "Sudeste", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
                   }
                   else if(region == 5)
                   {
-		     imprimeGrafico(1, "Sul", "files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "Sul", "../files/region"+idioma+".csv", 'corpo1-1', 'div#corpo1-1');
                   }
-                  imprimeLegenda("files/region"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
+                  imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
             }
             else  if(idioma == 3)
             {
-               window.location.assign("/visualizacao/index.html");
+               window.location.assign("../index.html");
             }
 	}
 
