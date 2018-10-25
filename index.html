@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Interdisciplinary Collaborations</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!--Div com Cabeçalho-->
+  <div id="cabecalho"> 
+	</br>
+	<h1 align="center"> On Interdisciplinary Collaborations in Scentific Coauthorship Networks </h1>
+        </br>
+        <div style="display: flex;justify-content: flex-start;">
+<!--Select para selecionar qual gráfico-->
+          <div>
+            <select id="idioma" onchange="atualiza_div(get_idioma());">
+	      <option value="0">Select</option>
+	      <option value="1">Collaborations per Major Area</option>
+	      <option value="6">Collaborations per Major Area (Complete)</option>
+	      <option value="2">Collaborations per Geographical Region</option>
+	      <option value="7">Collaborations per Geographical Region (Complete)</option>
+	      <option value="3">Researchers by Academic Age/Academic Age</option>
+	      <option value="8">Researchers by Academic Age/Academic Age (Complete)</option>
+	      <option value="4">Researchers by Academic Age/Great Area</option>
+	      <option value="9">Researchers by Academic Age/Great Area (Complete)</option>
+              <option value="5">Temporal analysis</option>
+	    </select>
+	  </div>
+        </div>
+      </br></br>
+  </div>
+
+
+  <div id="corpo1" style="display: flex;justify-content: space-between;">
+    <div id="corpo1-1">
+    </div>  
+    <div id="corpo1-2">
+    </div>  
+    <div id="corpo1-3">
+    </div>
+  </div>
+
+  <div id="corpo2" style="display: flex;justify-content: space-between;">
+    <div id="corpo2-1">
+    </div>  
+    <div id="corpo2-2">
+    </div>  
+    <div id="corpo2-3">
+    </div>
+  </div>
+
+  <div id="corpo3" style="display: flex;justify-content: space-between;">
+    <div id="corpo3-1">
+    </div>  
+    <div id="corpo3-2">
+    </div>  
+    <div id="corpo3-3">
+    </div>
+  </div>
+
+
+    <div id="rodape"> 
+        <p> Todos os Direitos Reservados </p>
+    </div>
+<!--Inicio do JavaScript no Código-->
+  <script>
+        function atualiza_div(idioma)
+	{
+             
+             if(idioma == 1)
+             {
+		window.location.assign("/visualizacao/coautoria.html");     
+             }
+             else if(idioma == 6)
+             {
+		window.location.assign("/visualizacao/coautoriaTodos.html");     
+             }
+             else if(idioma == 2)
+             {
+		window.location.assign("/visualizacao/region.html");     
+             }
+             else if(idioma == 7)
+             {
+		window.location.assign("/visualizacao/regionTodos.html");     
+             }
+             else if(idioma == 3)
+             {
+		window.location.assign("/visualizacao/idade.html");     
+             }
+             else if(idioma == 8)
+             {
+		window.location.assign("/visualizacao/idadeTodos.html");     
+             }
+             else if(idioma == 4)
+             {
+		window.location.assign("/visualizacao/idadeArea.html");     
+             }
+             else if(idioma == 9)
+             {
+		window.location.assign("/visualizacao/idadeAreaTodos.html");     
+             }
+             else if(idioma == 5)
+             {
+                window.location.assign("/visualizacao/distTempo.html"); 
+             }
+
+	}
+        
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+
+  </script>
+<!--Final do JavaScript no Código-->
+</body>
+</html>
