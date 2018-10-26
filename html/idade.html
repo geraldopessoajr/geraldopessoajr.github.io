@@ -1,30 +1,80 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Researchers by Academic Age</title>
-  <script src="../js/d3.v3.min.js"></script>
-  <script src="../js/d3.tip.v0.6.3.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/style2.css">
-</head>
-<body>
-<!--Div com Cabeçalho-->
-  <div id="cabecalho"> 
-	</br>
-	<h1 align="center"> Distribution of Researchers by Academic Age </h1>
-        </br>
-        <div style="display: flex;justify-content: flex-start;">
+    <title>Researchers by Academic Ages</title>
+    <script src="../js/d3.v3.min.js"></script>
+    <script src="../js/d3.tip.v0.6.3.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style2.css" rel="stylesheet">
+  </head>
+  
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Major Area</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./coautoria.html">per Great Area</a>
+              <a class="dropdown-item" href="./coautoriaTodos.html">All Great Areas</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Geographical Region</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./region.html">per Region</a>
+              <a class="dropdown-item" href="./regionTodos.html">All Regions</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Researchers by Academic Age</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./idade.html">per Academic Age</a>
+              <a class="dropdown-item" href="./idadeTodos.html">All Academic Ages</a>
+              <a class="dropdown-item" href="./idadeArea.html">per Great Area</a>
+              <a class="dropdown-item" href="./idadeAreaTodos.html">All Great Areas</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Temporal analysis</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./distTempo.html">per Great Area</a>
+              <a class="dropdown-item" href="./distTempo.html">All Great Areas</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Researchers by Academic Age</h1>
+        <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
+      </div>
+
+    </main><!-- /.container -->
+
+  <div id="corpo">
+       <div style="display: flex;justify-content: flex-start;">
 <!--Select para selecionar qual gráfico-->
-          <div>
-            <select id="idioma" onchange="atualiza_div(get_idioma(), get_idade());">
-              <option value="0">Select</option>
-	      <option value="1">Portuguese</option>
-	      <option value="2">English</option>
-	      <option value="3">Back</option>
-	    </select>
-	  </div>
           <div>
             <select id="idade" onchange="atualiza_div(get_idioma(), get_idade());">
               <option value="1">[0,10]</option>
@@ -32,12 +82,14 @@
 	      <option value="3"> >20</option>
 	    </select>
 	  </div>
+          <div>
+            <select id="idioma" onchange="atualiza_div(get_idioma(), get_idade());">
+              <option value="1">Portuguese</option>
+	      <option value="2" selected>English</option>
+	    </select>
+	  </div>
         </div>
       </br></br>
-  </div>
-
-  <div id="corpo">
-
 	  <div id="corpo1" style="display: flex;justify-content: space-between;">
 	    <div id="corpo1-1">
 	    </div>  
@@ -48,9 +100,13 @@
   </div>
 
 
-    <div id="rodape"> 
-        <p> Todos os Direitos Reservados </p>
-    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!--Inicio do JavaScript no Código-->
   <script>
         function atualiza_div(idioma, idade)
@@ -62,41 +118,37 @@
              {
                  if(idade == 1)
                  {
-		     imprimeGrafico(2, "[0,10]", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, "[0,10]", "Academic Age:", 'corpo1-1');
                  }
                  else if(idade == 2)
                  {
-		     imprimeGrafico(2, "(10,20]", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, "(10,20]", "Academic Age:", 'corpo1-1');
                  }
                  else if(idade == 3)
                  {
-		     imprimeGrafico(2, ">20", "Academic Age:", 'corpo1-1', 'div#corpo1-1', "Frequency");
+		     imprimeGrafico(2, ">20", "Academic Age:", 'corpo1-1');
                  }
-                 imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
+                 imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2');
              }
              else if(idioma == 1)
              {
                  if(idade == 1)
                  {
-		     imprimeGrafico(1, "[0,10]", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "[0,10]", "Idade Acadêmica:", 'corpo1-1');
                  }
                  else if(idade == 2)
                  {
-		     imprimeGrafico(1, "(10,20]","Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, "(10,20]","Idade Acadêmica:", 'corpo1-1');
                  }
                  else if(idade == 3)
                  {
-		     imprimeGrafico(1, ">20", "Idade Acadêmica:", 'corpo1-1', 'div#corpo1-1');
+		     imprimeGrafico(1, ">20", "Idade Acadêmica:", 'corpo1-1');
                  }
-		 imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2', 'div#corpo1-2');
-            }
-            else  if(idioma == 3)
-            {
-               window.location.assign("../index.html");
+		 imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo1-2');
             }
 	}
 
-	function imprimeGrafico(idioma, idade, arquivo, corpo, div)
+	function imprimeGrafico(idioma, idade, arquivo, divsvg)
         {
 
             var stack = d3.layout.stack();
@@ -376,8 +428,8 @@
     var formatPercent = d3.format(".0%");
 
     var margin = {top: 30, right: 30, bottom: 30, left: 30},
-	width = document.getElementById(corpo).offsetWidth - (margin.left) - (margin.right),
-	height = document.getElementById(corpo).offsetHeight - (margin.top) - (margin.bottom);
+	width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
+	height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
     var x = d3.scale.ordinal()
         .domain(dataset["categories"])
@@ -398,7 +450,7 @@
         .orient("left")
         .tickFormat(formatPercent);
 
-    var svg = d3.select(div).append("svg")
+    var svg = d3.select("div#"+divsvg).append("svg")
         .attr("width", width + 2*(margin.left + margin.right))
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -444,12 +496,12 @@
 //Título do Gráfico *tittle* é adicionado aqui no svg
         svg.append("text")
 	    .attr("x", (width / 2))             
-	    .attr("y", 0 - (margin.top / 2))
+	    .attr("y", 0 - (margin.top / 2)+10)
 	    .attr("text-anchor", "middle")  
-	    .style("font-size", "20px") 
+	    .style("font-size", "30px") 
 	    .text(function(){if(idioma == 1){return idade + " Anos";}else{return idade+" Years"}});
 	}
-	function imprimeLegenda(arquivo, corpo, div)
+	function imprimeLegenda(arquivo, divsvg)
         {
 
              var legendRectSize = 18;                              
@@ -460,12 +512,12 @@
  
              
              var margin = {top: 30, right: 10, bottom: 30, left: 32},
-			  width = document.getElementById(corpo).offsetWidth - (margin.left) - (margin.right),
-			  height = document.getElementById(corpo).offsetHeight - (margin.top) - (margin.bottom);
+			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
+			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
 
 //cria o svg que receberá o Grafico
-	     var svg = d3.select(div).append("svg")
+	     var svg = d3.select("div#"+divsvg).append("svg")
 		  .attr("width", width + margin.left + margin.right)
 		  .attr("height", height + margin.top + margin.bottom)
 		.append("g")
@@ -512,13 +564,8 @@
           var idades = document.getElementById('idade')
           return idades.options[idade.selectedIndex].value
         }
-
-        function sum(arr) {
-          return arr.reduce(function (a, b) {
-             return a + b;
-           }, 0);
-        }
   </script>
 <!--Final do JavaScript no Código-->
+  <script> atualiza_div(2, 1);</script>
 </body>
 </html>
