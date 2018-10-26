@@ -1,25 +1,17 @@
-body{
-background-color:#ffffff;
-text-align:center;
+body {
+  padding-top: 5rem;
 }
-
-div#cabecalho{
-width:69%;
-height: 200px;
-background: #dddddd;
-box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-font: 10px sans-serif;
-text-align: center;
-margin: -20px auto 10px auto;
-padding: 10px;
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
 div#corpo{
-width:69%;
+width:90%;
 height: 800px;
 background: #ffffff;
 box-shadow: 0px 0px 0px rgba(0,0,0,.5);
-font: 30px sans-serif;
+font: 20px sans-serif;
 text-align: center;
 margin: -10px auto 10px auto;
 padding: 10px;
@@ -30,8 +22,7 @@ div#corpo1{
 width:100%;
 height: 750px;
 background: #ffffff;
-box-shadow: 0px 0px 0px rgba(0,0,0,.5);
-font: 30px sans-serif;
+font: 10px sans-serif;
 text-align: center;
 margin: -10px auto 10px auto;
 padding: 10px;
@@ -57,25 +48,16 @@ margin: -10px auto 10px auto;
 padding: 10px;
 }
 
-div#rodape{
-width:69%;
-height: 50px;
-background: #dddddd;
-box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-font: 10px sans-serif;
-text-align: center;
-margin: -10px auto 10px auto;
-padding: 10px;
+path { 
+       stroke: steelblue;
+       stroke-width: 2;
+       fill: none;
 }
-
-.estados{
-  text-align: left
-} 
-
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: grey;
+  stroke-width: 1;
   shape-rendering: crispEdges;
 }
 
