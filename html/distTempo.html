@@ -121,78 +121,136 @@
              
              if(idioma == 2)
              {
-		  dataset = {
-		    "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],             "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
-		  }
 
                   if(area == 1)
                   {
+                    dataset = {
+		                "series": ["Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                         
+                                "colors": ["#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Agrarian Sciences", "../files/at_cienciasagrarias"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 2)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
+                               "colors": ["#2166ac", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 3)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
+                               "colors": ["#2166ac", "#4393c3", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Biological Sciences", "../files/at_cienciasbiologicas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 4)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
+                               "colors": ["#2166ac", "#4393c3", "#92c5de", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Engineering", "../files/at_engenharias"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 5)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Health Sciences","Humanities","Linguistics Letters and Arts"],                        
+                               "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Exact and Earth Sciences", "../files/at_cienciasexatasedaterra"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 6)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],            
+                               "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Health Sciences", "../files/at_cienciasdasaude"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 7)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],            
+                               "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 8)
                   {
+                    dataset = {
+		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],            
+                               "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		       }
 		     imprimeGrafico(2, "Linguistics Letters and Arts", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo1-1', dataset);
                   }
              }
              else if(idioma == 1)
              {
-		 dataset = {
-		    "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],           "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
-		  }
                   if(area == 1)
                   {
+  		     dataset = {
+		                 "series": ["Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],                         
+                                 "colors": ["#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências Agrárias", "../files/at_cienciasagrarias"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 3)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
+                         "colors": ["#2166ac", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências Biológicas", "../files/at_cienciasbiologicas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 6)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
+                         "colors": ["#2166ac", "#4393c3", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências da Saúde", "../files/at_cienciasdasaude"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 5)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde", "Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
+                         "colors": ["#2166ac", "#4393c3", "#92c5de", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências Exatas e da Terra", "../files/at_cienciasexatasedaterra"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 7)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
+                         "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f4a582", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências Humanas", "../files/at_cienciashumanas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 2)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Engenharias","Linguitíca Letras e Artes"],        
+                         "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#d6604d", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Ciências Sociais e Aplicadas", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 4)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Linguitíca Letras e Artes"],                 
+                         "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#b2182b"]
+		         }
 		     imprimeGrafico(1, "Engenharias", "../files/at_engenharias"+idioma+".csv", 'corpo1-1', dataset);
                   }
                   else if(area == 8)
                   {
+  		     dataset = {
+		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias"],
+                         "colors": ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#fddbc7", "#f4a582", "#d6604d"]
+		         }
 		     imprimeGrafico(1, "Linguística Letras e Artes", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo1-1', dataset);
                   }
             }
@@ -268,7 +326,7 @@
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end")
-		    .text(function(){if(idioma == 1){return "Número de Publicações";}else{return "Number of Publications"}});
+		    .text(function(){if(idioma == 1){return "Número de Colaborações";}else{return "Number of Collaborations"}});
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
 		  svg.append("text")
