@@ -363,7 +363,6 @@ function make_y_gridlines() {
 		    .style("font-size", "30px") 
 		    .text(great_area);
 
-
 		    var legend = svg.append("g")
 		      .attr("class", "legend")
 
@@ -371,8 +370,18 @@ function make_y_gridlines() {
 		      .data(dataset["colors"])
 		      .enter()
 		      .append("rect")
-		      .attr("x", function(d, i){return margin.right+20})
-		      .attr("y", function(d, i){return i *  15;})
+		      .attr("x", function(d, i){return margin.right+60})
+		      .attr("y", function(d, i){return (i *  15)+20;})
+		      .attr("width", 200)
+		      .attr("height", 20)
+		      .style("fill", "#FFFAFA")
+
+                    legend.selectAll('text')
+		      .data(dataset["colors"])
+		      .enter()
+		      .append("rect")
+		      .attr("x", function(d, i){return margin.right+70})
+		      .attr("y", function(d, i){return (i *  15)+25;})
 		      .attr("width", 10)
 		      .attr("height", 10)
 		      .style("fill", function(d) {
@@ -383,9 +392,12 @@ function make_y_gridlines() {
 		      .data(dataset["series"])
 		      .enter()
 		    .append("text")
-		    .attr("x", function(d, i){return margin.right+45})
-		    .attr("y", function(d, i){return i *  15+9;})
+		    .attr("x", function(d, i){return margin.right+95})
+		    .attr("y", function(d, i){return (i *  15+9)+25;})
 		    .text(function(d){return d});
+
+
+
 
                                       
 	     });
