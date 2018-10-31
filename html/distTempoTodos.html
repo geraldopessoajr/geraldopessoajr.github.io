@@ -186,7 +186,17 @@
 		  .attr("width", width + (margin.left + margin.right))
 		  .attr("height", height + margin.top + margin.bottom)
 		.append("g")
-		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// gridlines in x axis function
+function make_x_gridlines() {		
+    return d3.svg.axis().scale(x).tickSize(5).tickPadding(6).orient("bottom").ticks(5);
+}
+
+// gridlines in y axis function
+function make_y_gridlines() {		
+    return d3.svg.axis().scale(y).orient("left").ticks(5);
+} 
                              
              d3.csv(arquivo, function(error, data) {
 		    data.forEach(function(d) {
@@ -196,6 +206,23 @@
                
                x.domain(d3.extent(data, function(d) { return d.ano; }));
                y.domain([0, 50000]);
+
+  // add the X gridlines
+  svg.append("g")			
+      .attr("class", "grid")
+      .attr("transform", "translate(0," + height + ")")
+      .call(make_x_gridlines()
+          .tickSize(-height)
+          .tickFormat("")
+      )
+
+  // add the Y gridlines
+  svg.append("g")			
+      .attr("class", "grid")
+      .call(make_y_gridlines()
+          .tickSize(-width)
+          .tickFormat("")
+      )
 
 
 		// Nest the entries by symbol
