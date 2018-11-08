@@ -393,9 +393,10 @@
         .style("fill",function(d){return dataset["colors"][d.colorIndex];})
 
     rect.append("text").text(function(d) {return d.y+"%";})
-       .attr("x", function(d, i, j) { return 22+(x(d.month) + x.rangeBand() / n * j); })
+       .attr("x", function(d, i, j) { return 35+(x(d.month) + x.rangeBand() / n * j); })
        .attr("y", function(d) {return y(d.y/100)-6;})
-       .attr("text-anchor", "middle");
+       .attr("text-anchor", "middle")
+       .style("font-size", "16px");
 
         svg.append("g")
             .attr("class", "x axis")
