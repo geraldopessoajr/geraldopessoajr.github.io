@@ -166,7 +166,7 @@
 	     var tip = d3.tip()
 		  .attr('class', 'd3-tip')
 		  .offset([-10, 0])
-		  .html(function(d) {return "<span style='color:white'>" + d.region + "%</span>";});
+		  .html(function(d) {return "<span style='color:white'>" + d.coautoria + "%</span>";});
 
 
 //cria o svg que receberá o Grafico
@@ -236,7 +236,8 @@
                  bars.append("text").text(function(d) {return d.region+"%";})
 		    .attr("x", function(d) { return x(d.region_2)+x.rangeBand()/2; })
 		    .attr("y", function(d) {return y(d.region/100)-6;})
-		    .attr("text-anchor", "middle");
+		    .attr("text-anchor", "middle")
+                    .style("font-size", "16px");
 
                                       
 	     });
