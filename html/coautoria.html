@@ -289,7 +289,8 @@
                  bars.append("text").text(function(d) {return d.coautoria+"%";})
 		    .attr("x", function(d) { return x(d.sigla)+x.rangeBand()/2; })
 		    .attr("y", function(d) {return y(d.coautoria/100)-6;})
-		    .attr("text-anchor", "middle");
+		    .attr("text-anchor", "middle")
+                    .style("font-size", "16px");
 
                                       
 	     });
