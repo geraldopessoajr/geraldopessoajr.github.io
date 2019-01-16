@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Researchers by Academic Age</title>
+    <script src="../js/d3.v3.min.js"></script>
+    <script src="../js/d3.tip.v0.6.3.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style4.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Major Area</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./coautoria.html">per Great Area</a>
+              <a class="dropdown-item" href="./coautoriaTodos.html">All Great Areas</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Geographical Region</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./region.html">per Region</a>
+              <a class="dropdown-item" href="./regionTodos.html">All Regions</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Researchers by Academic Age</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <!---<a class="dropdown-item" href="./html/idade.html">per Academic Age</a>
+              <a class="dropdown-item" href="./html/idadeTodos.html">All Academic Ages</a>
+              <a class="dropdown-item" href="./html/idadeArea.html">per Great Area</a>
+              <a class="dropdown-item" href="./html/idadeAreaTodos.html">All Great Areas</a>--->
+              <a class="dropdown-item" href="./inter.html">per Great Area</a>
+              <a class="dropdown-item" href="./interTodos.html">All Great Areas</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Temporal analysis</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./distTempo.html">per Great Area</a>
+              <a class="dropdown-item" href="./distTempoTodos.html">All Great Areas</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Researchers by Academic Age</h1>
+        <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
+      </div>
+
+    </main><!-- /.container -->
+
+  <div id="corpo">
+        <div style="display: flex;justify-content: flex-start;">
+<!--Select para selecionar qual gráfico-->
+          <div>
+            <select id="idioma" onchange="atualiza_div(get_idioma());">
+              <option value="1">Portuguese</option>
+	      <option value="2" selected>English</option>
+	    </select>
+	  </div>
+        </div>
+        </br></br>
+	  <div id="corpo1" style="display: flex;justify-content: space-between;">
+	    <div id="corpo1-1">
+	    </div>  
+	    <div id="corpo1-2">
+	    </div>
+	  </div>
+
+	  <div id="corpo2" style="display: flex;justify-content: space-between;">
+	    <div id="corpo2-1">
+	    </div>  
+	    <div id="corpo2-2">
+	    </div> 
+	  </div>
+
+	  <div id="corpo3" style="display: flex;justify-content: space-between;">
+	    <div id="corpo3-1">
+	    </div>  
+	    <div id="corpo3-2">
+	    </div>
+	  </div>
+	  <div id="corpo4" style="display: flex;justify-content: space-between;">
+	    <div id="corpo4-1">
+	    </div>  
+	    <div id="corpo4-2">
+	    </div>
+	  </div>
+	  <div id="corpo5" style="display: flex;justify-content: space-between;">
+	  </div>
+  </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!--Inicio do JavaScript no Código-->
+  <script>
+        function atualiza_div(idioma)
+	{
+	     d3.select("svg").remove();
+	     d3.select("svg").remove();
+             d3.select("svg").remove();
+	     d3.select("svg").remove();
+	     d3.select("svg").remove();
+	     d3.select("svg").remove();
+             d3.select("svg").remove();
+	     d3.select("svg").remove();
+	     d3.select("svg").remove();
+             
+             if(idioma == 2)
+             {
+		     imprimeGrafico(2, "Agrarian Sciences", "Agrarian Sciences", 'corpo1-1');
+		     imprimeGrafico(2, "Applied and Social Sciences", "Applied and Social Sciences", 'corpo1-2');
+		     imprimeGrafico(2, "Biological Sciences", "Biological Sciences", 'corpo2-1');
+		     imprimeGrafico(2, "Engineering", "Engineering", 'corpo2-2');
+		     imprimeGrafico(2, "Exact and Earth Sciences", "Exact and Earth Sciences", 'corpo3-1');
+		     imprimeGrafico(2, "Health Sciences", "Health Sciences", 'corpo3-2');
+		     imprimeGrafico(2, "Humanities", "Humanities", 'corpo4-1');
+		     imprimeGrafico(2, "Linguistics Letters and Arts", "Linguistics Letters and Arts", 'corpo4-2');
+		     imprimeLegenda("../files/idade"+idioma+"legenda.csv", 'corpo5');
+             }
+             else if(idioma == 1)
+             {
+		     imprimeGrafico(1, "Agrarian Sciences","Ciências Agrárias", 'corpo1-1');
+		     imprimeGrafico(1, "Biological Sciences","Ciências Biológicas", 'corpo1-2');
+		     imprimeGrafico(1, "Health Sciences", "Ciências da Saúde", 'corpo2-1');
+		     imprimeGrafico(1, "Exact and Earth Sciences", "Ciências Exatas e da Terra", 'corpo2-2');
+		     imprimeGrafico(1, "Humanities", "Ciências Humanas", 'corpo3-1');
+		     imprimeGrafico(1, "Applied and Social Sciences", "Ciências Sociais e Aplicadas", 'corpo3-2');
+		     imprimeGrafico(1, "Engineering", "Engenharias", 'corpo4-1');
+		     imprimeGrafico(1, "Linguistics Letters and Arts", "Linguística Letras e Artes",'corpo4-2');
+		     imprimeLegenda("../files/idade"+idioma+"legenda.csv", 'corpo5');
+            }
+	}
+
+	function imprimeGrafico(idioma, great_area, arquivo, divsvg)
+        {
+
+            var stack = d3.layout.stack();
+            var dataset =[];
+     
+
+		    if(great_area == "Agrarian Sciences")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":25.5,"month":"[0,10]"},
+		                    {"y":16.2,"month":"(10,20]"},
+		                    {"y":16.6,"month":">20"}
+		                ],
+		                [
+		                    {"y":74.5,"month":"[0,10]"},
+		                    {"y":83.8,"month":"(10,20]"},
+		                    {"y":83.4,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Applied and Social Sciences")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":74.5,"month":"[0,10]"},
+		                    {"y":62.7,"month":"(10,20]"},
+		                    {"y":68.0,"month":">20"}
+		                ],
+		                [
+		                    {"y":25.5,"month":"[0,10]"},
+		                    {"y":37.3,"month":"(10,20]"},
+		                    {"y":32.0,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Biological Sciences")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":24.8,"month":"[0,10]"},
+		                    {"y":15.8,"month":"(10,20]"},
+		                    {"y":17.9,"month":">20"}
+		                ],
+		                [
+		                    {"y":75.2,"month":"[0,10]"},
+		                    {"y":84.2,"month":"(10,20]"},
+		                    {"y":82.1,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Engineering")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":56.7,"month":"[0,10]"},
+		                    {"y":44.4,"month":"(10,20]"},
+		                    {"y":42.9,"month":">20"}
+		                ],
+		                [
+		                    {"y":43.3,"month":"[0,10]"},
+		                    {"y":55.6,"month":"(10,20]"},
+		                    {"y":57.1,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Exact and Earth Sciences")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":52.5,"month":"[0,10]"},
+		                    {"y":34.6,"month":"(10,20]"},
+		                    {"y":35.4,"month":">20"}
+		                ],
+		                [
+		                    {"y":47.5,"month":"[0,10]"},
+		                    {"y":65.4,"month":"(10,20]"},
+		                    {"y":64.6,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Health Sciences")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":32.4,"month":"[0,10]"},
+		                    {"y":24.9,"month":"(10,20]"},
+		                    {"y":27.5,"month":">20"}
+		                ],
+		                [
+		                    {"y":67.6,"month":"[0,10]"},
+		                    {"y":75.1,"month":"(10,20]"},
+		                    {"y":72.5,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Humanities")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":81.1,"month":"[0,10]"},
+		                    {"y":70.5,"month":"(10,20]"},
+		                    {"y":66.4,"month":">20"}
+		                ],
+		                [
+		                    {"y":18.9,"month":"[0,10]"},
+		                    {"y":29.5,"month":"(10,20]"},
+		                    {"y":33.6,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+                    else if(great_area == "Linguistics Letters and Arts")
+		    {
+		       dataset = {
+		        "categories": ["[0,10]", "(10,20]", ">20"],
+		        "series": ['Non-interdisciplinary','Interdisciplinary'],
+		        "colors": ["#e41a1c", "#377eb8"],
+		        "layers": [
+		                [
+		                    {"y":89.3,"month":"[0,10]"},
+		                    {"y":84.1,"month":"(10,20]"},
+		                    {"y":79.9,"month":">20"}
+		                ],
+		                [
+		                    {"y":10.7,"month":"[0,10]"},
+		                    {"y":15.9,"month":"(10,20]"},
+		                    {"y":20.1,"month":">20"}
+		                ]
+		            ]
+		          }
+		          n = dataset["series"].length; // Number of Layers
+		          m = dataset["layers"].length; // Number of Samples in 1 layer
+		    }
+
+
+
+    var formatPercent = d3.format(".0%");
+
+    var margin = {top: 30, right: 30, bottom: 30, left: 40},
+	width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
+	height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
+
+    var x = d3.scale.ordinal()
+        .domain(dataset["categories"])
+        .rangeRoundBands([0, width], .08);
+
+    var y = d3.scale.linear()
+        .domain([0, 1])
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .tickSize(5)
+        .tickPadding(6)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .tickFormat(formatPercent);
+
+    var svg = d3.select("div#"+divsvg).append("svg")
+        .attr("width", width + (margin.left + margin.right))
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var layer = svg.selectAll(".layer")
+        .data(dataset["layers"])
+        .enter().append("g")
+        .attr("class", "layer");
+
+    var rect = layer.selectAll("rect")
+        .data(function(d,i){d.map(function(b){b.colorIndex=i;return b;});return d;})
+        .enter()
+    rect.append("rect")
+        .attr("x", function(d, i, j) { return x(d.month) + x.rangeBand() / n * j; })
+        .attr("width", x.rangeBand() / n)
+        .attr("y", function(d) { return y(d.y/100); })
+        .attr("height", function(d) { return height - y(d.y/100)})
+        .attr("class","bar")
+        .style("fill",function(d){return dataset["colors"][d.colorIndex];})
+
+    rect.append("text").text(function(d) {return d.y+"%";})
+       .attr("x", function(d, i, j) { return 60+(x(d.month) + x.rangeBand() / n * j); })
+       .attr("y", function(d) {return y(d.y/100)-6;})
+       .attr("text-anchor", "middle")
+       .style("font-size", "16px");
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+//definido o dominio y do gráfico
+    svg.append("g")
+        .attr("class", "y axis")
+	.call(yAxis)
+        .append("text")
+	.attr("transform", "rotate(-90)")
+	.attr("y", 6)
+	.attr("dy", ".71em")
+	.style("text-anchor", "end")
+	.text(function(){if(idioma == 1){return "Frequência";}else{return "Frequency"}});
+
+//Título do Gráfico *tittle* é adicionado aqui no svg
+        svg.append("text")
+	    .attr("x", (width / 2))             
+	    .attr("y", 0 - (margin.top / 2))
+	    .attr("text-anchor", "middle")  
+	    .style("font-size", "20px") 
+	    .text(arquivo);
+
+	   /* // add legend
+	    var legend = svg.append("g")
+	      .attr("class", "legend")
+
+	    legend.selectAll('text')
+	      .data(dataset["colors"])
+	      .enter()
+	      .append("rect")
+	      .attr("x", margin.right)
+	      .attr("y", function(d, i){ return i *  20;})
+	      .attr("width", 10)
+	      .attr("height", 10)
+	      .style("fill", function(d) {
+		return d;
+	      })
+
+	    legend.selectAll('text')
+	      .data(dataset["series"])
+	      .enter()
+	    .append("text")
+	    .attr("x", margin.right + 25)
+	    .attr("y", function(d, i){ return i *  20 + 9;})
+	    .text(function(d){return d});*/
+	}
+
+	function imprimeLegenda(arquivo, divsvg)
+        {
+
+             var legendRectSize = 18;                              
+             
+             var legendSpacing = 4; 
+             
+             var color = d3.scale.ordinal(d3.schemeCategory20b);
+ 
+             
+             var margin = {top: 0, right: 10, bottom: 30, left: 32},
+			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
+			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
+
+
+//cria o svg que receberá o Grafico
+	     var svg = d3.select("div#"+divsvg).append("svg")
+		  .attr("width", width + margin.left + margin.right)
+		  .attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+             
+             d3.csv(arquivo, function(dataset) {  
+
+//Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
+		 var legend = svg.selectAll(".legend")                     
+		    .data(dataset)                                   
+		    .enter()                                                
+		    .append('g')                                            
+		    .attr('class', 'legend')    ;                            
+		    //.attr('transform', function(d, i) {                     
+		       //var height = legendRectSize + legendSpacing;          
+		       //var offset =  height * color.domain().length / 2;     
+		       //var horz = legendRectSize;                       
+		       //var vert = i * height - offset;                       
+		       //return 'translate(' + horz + ',' + vert + ')';        
+		       //});
+
+                 legend.append('rect')                                      // NEW
+                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
+                    .style('fill', function(d) {return d.color})            // NEW
+                    .style('stroke', color);                                // NEW                                                     
+//Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30+22;})
+                    .style("font-size", "16px")              
+		    .text(function(d) {return d.type;});
+                                      
+	     });
+	}
+        
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+
+        function sum(arr) {
+          return arr.reduce(function (a, b) {
+             return a + b;
+           }, 0);
+        }
+  </script>
+<!--Final do JavaScript no Código-->
+  <script> atualiza_div(2);</script>
+</body>
+</html>
