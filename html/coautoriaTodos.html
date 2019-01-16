@@ -46,10 +46,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Researchers by Academic Age</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="./idade.html">per Academic Age</a>
-              <a class="dropdown-item" href="./idadeTodos.html">All Academic Ages</a>
-              <a class="dropdown-item" href="./idadeArea.html">per Great Area</a>
-              <a class="dropdown-item" href="./idadeAreaTodos.html">All Great Areas</a>
+              <!---<a class="dropdown-item" href="./html/idade.html">per Academic Age</a>
+              <a class="dropdown-item" href="./html/idadeTodos.html">All Academic Ages</a>
+              <a class="dropdown-item" href="./html/idadeArea.html">per Great Area</a>
+              <a class="dropdown-item" href="./html/idadeAreaTodos.html">All Great Areas</a>--->
+              <a class="dropdown-item" href="./inter.html">per Great Area</a>
+              <a class="dropdown-item" href="./interTodos.html">All Great Areas</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -87,8 +89,6 @@
 	    <div id="corpo1-1">
 	    </div>  
 	    <div id="corpo1-2">
-	    </div>  
-	    <div id="corpo1-3">
 	    </div>
 	  </div>
 
@@ -96,18 +96,22 @@
 	    <div id="corpo2-1">
 	    </div>  
 	    <div id="corpo2-2">
-	    </div>  
-	    <div id="corpo2-3">
-	    </div>
+	    </div> 
 	  </div>
 
 	  <div id="corpo3" style="display: flex;justify-content: space-between;">
 	    <div id="corpo3-1">
 	    </div>  
 	    <div id="corpo3-2">
-	    </div>  
-	    <div id="corpo3-3">
 	    </div>
+	  </div>
+	  <div id="corpo4" style="display: flex;justify-content: space-between;">
+	    <div id="corpo4-1">
+	    </div>  
+	    <div id="corpo4-2">
+	    </div>
+	  </div>
+	  <div id="corpo5" style="display: flex;justify-content: space-between;">
 	  </div>
   </div>
 
@@ -137,25 +141,25 @@
              {
 		     imprimeGrafico(2, "Agrarian Sciences", "../files/coautoria"+idioma+".csv", 'corpo1-1');
 		     imprimeGrafico(2, "Applied and Social Sciences", "../files/coautoria"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico(2, "Biological Sciences", "../files/coautoria"+idioma+".csv", 'corpo1-3');
-		     imprimeGrafico(2, "Engineering", "../files/coautoria"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico(2, "Exact and Earth Sciences", "../files/coautoria"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico(2, "Health Sciences", "../files/coautoria"+idioma+".csv", 'corpo2-3');
-		     imprimeGrafico(2, "Humanities", "../files/coautoria"+idioma+".csv", 'corpo3-1');
-		     imprimeGrafico(2, "Linguistics Letters and Arts", "../files/coautoria"+idioma+".csv", 'corpo3-2');
-		     imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo3-3');
+		     imprimeGrafico(2, "Biological Sciences", "../files/coautoria"+idioma+".csv", 'corpo2-1');
+		     imprimeGrafico(2, "Engineering", "../files/coautoria"+idioma+".csv", 'corpo2-2');
+		     imprimeGrafico(2, "Exact and Earth Sciences", "../files/coautoria"+idioma+".csv", 'corpo3-1');
+		     imprimeGrafico(2, "Health Sciences", "../files/coautoria"+idioma+".csv", 'corpo3-2');
+		     imprimeGrafico(2, "Humanities", "../files/coautoria"+idioma+".csv", 'corpo4-1');
+		     imprimeGrafico(2, "Linguistics Letters and Arts", "../files/coautoria"+idioma+".csv", 'corpo4-2');
+		     imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
              }
              else if(idioma == 1)
              {
 		     imprimeGrafico(1, "Ciências Agrárias", "../files/coautoria"+idioma+".csv", 'corpo1-1');
 		     imprimeGrafico(1, "Ciências Biológicas", "../files/coautoria"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico(1, "Ciências da Saúde", "../files/coautoria"+idioma+".csv", 'corpo1-3');
-		     imprimeGrafico(1, "Ciências Exatas e da Terra", "../files/coautoria"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico(1, "Ciências Humanas", "../files/coautoria"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico(1, "Ciências Sociais e Aplicadas", "../files/coautoria"+idioma+".csv", 'corpo2-3');
-		     imprimeGrafico(1, "Engenharias", "../files/coautoria"+idioma+".csv", 'corpo3-1');
-		     imprimeGrafico(1, "Linguística Letras e Artes", "../files/coautoria"+idioma+".csv", 'corpo3-2');
-		     imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo3-3');
+		     imprimeGrafico(1, "Ciências da Saúde", "../files/coautoria"+idioma+".csv", 'corpo2-1');
+		     imprimeGrafico(1, "Ciências Exatas e da Terra", "../files/coautoria"+idioma+".csv", 'corpo2-2');
+		     imprimeGrafico(1, "Ciências Humanas", "../files/coautoria"+idioma+".csv", 'corpo3-1');
+		     imprimeGrafico(1, "Ciências Sociais e Aplicadas", "../files/coautoria"+idioma+".csv", 'corpo3-2');
+		     imprimeGrafico(1, "Engenharias", "../files/coautoria"+idioma+".csv", 'corpo4-1');
+		     imprimeGrafico(1, "Linguística Letras e Artes", "../files/coautoria"+idioma+".csv", 'corpo4-2');
+		     imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
             }      
 
 	}
@@ -274,7 +278,7 @@
              var color = d3.scale.ordinal(d3.schemeCategory20b);
  
              
-             var margin = {top: 30, right: 10, bottom: 30, left: 32},
+             var margin = {top: 0, right: 10, bottom: 30, left: 32},
 			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
 			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
@@ -293,24 +297,27 @@
 		    .data(dataset)                                   
 		    .enter()                                                
 		    .append('g')                                            
-		    .attr('class', 'legend')                                
-		    .attr('transform', function(d, i) {                     
-		       var height = legendRectSize + legendSpacing;          
-		       var offset =  height * color.domain().length / 2;     
-		       var horz = legendRectSize;                       
-		       var vert = i * height - offset;                       
-		       return 'translate(' + horz + ',' + vert + ')';        
-		       });
+		    .attr('class', 'legend')    ;                            
+		    //.attr('transform', function(d, i) {                     
+		       //var height = legendRectSize + legendSpacing;          
+		       //var offset =  height * color.domain().length / 2;     
+		       //var horz = legendRectSize;                       
+		       //var vert = i * height - offset;                       
+		       //return 'translate(' + horz + ',' + vert + ')';        
+		       //});
 
                  legend.append('rect')                                      // NEW
-                    .attr('width', legendRectSize)                          // NEW
-                    .attr('height', legendRectSize)                         // NEW
+                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
-		    .attr('x', legendRectSize + legendSpacing)              
-		    .attr('y', legendRectSize - legendSpacing)              
+		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30+22;})
+                    .style("font-size", "16px")              
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
