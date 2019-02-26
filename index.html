@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<meta charset="utf-8">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,6 +9,8 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>On Interdisciplinary Collaborations in Scentific Coauthorship Networks</title>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/d3.tip.v0.6.3.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -39,6 +42,8 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="./html/region.html">per Region</a>
               <a class="dropdown-item" href="./html/regionTodos.html">All Regions</a>
+              <a class="dropdown-item" href="./html/regionGreatArea.html">Great Areas</a>
+              <a class="dropdown-item" href="./html/regionperGreatArea.html">Great Areas (per Region)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -56,7 +61,9 @@
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Temporal analysis</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="./html/distTempo.html">per Great Area</a>
-              <a class="dropdown-item" href="./html/distTempoTodos.html">All Great Areas</a>
+              <a class="dropdown-item" href="./html/distTempoTodos1.html">All Great Areas [< 2k]</a>
+              <a class="dropdown-item" href="./html/distTempoTodos2.html">All Great Areas [2k, 4k]</a>
+              <a class="dropdown-item" href="./html/distTempoTodos3.html">All Great Areas [> 4k]</a>
             </div>
           </li>
         </ul>
@@ -64,18 +71,36 @@
     </nav>
 
     <main role="main" class="container">
-
-      <div class="starter-template">
+      <div id="texto" class="starter-template">
         <h1>On Interdisciplinary Collaborations in Scentific Coauthorship Networks</h1>
-        </br></br></br>
-        <p align="justify">Project developed by the master student of the DCC/UFMG, Geraldo José Pessoa Junior, under the supervised of Prof. Dr. Alberto Henrique Frade Laender. This project aims to analyze the impact of the interdisciplinarity of collaborations in scientific coauthorship networks. The Lattes Platform was used as a database for the generation of Interdiciplinary and Global coauthorship networks. The coauthoship networks (global and interdisciplinary):</p>
-        </br></br></br>
-        <img src="./img/interxglobal.jpg" alt="The Brazilian Global and Interdisciplinary Coauthorship Networks" width=585,5 height=359>
-        </br></br></br>
-        <p align="justify">We will present the results of the analyzes of these networks considering: the percentage of collaboration among the eight major areas proposed by Lattes (Agrarian Science, Applied and Social Science, Biological Science, Engineering, Exact and Earth Science, Health Science, Humanities and Linguistic, Letters and Arts), the analysis considering the five geographic regions of Brazil (Center-West, North, Northeast, South and Southeast), the analysis the academic age of the researcher (up to 10 years, 10-20 years, and over 20 years) and finally, the temporal analysis of the quantity of publications between two great areas.</p>
+        <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
       </div>
 
     </main><!-- /.container -->
+       <div id="corpo">
+      <div class="starter-template">
+	<div style="display: flex;justify-content: flex-start;">
+	  <div>
+	    <select id="idioma" onchange="atualiza_div(get_idioma());">
+	      <option value="1">Portuguese</option>
+	      <option value="2" selected>English</option>
+	    </select>
+	  </div>
+	</div>    
+      </div>
+
+      <div id="corpo1">
+      </div>
+
+      <div id="corpo2">
+      </div>
+
+      <div id="corpo3">
+      </div>
+
+      <div id="corpo4">
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -84,5 +109,102 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+        function atualiza_div(idioma)
+        {
+             d3.select("svg").remove();
+             if(idioma == 2)
+             {
+                document.getElementById("texto").innerHTML = "<h1>On Interdisciplinary Collaborations in Scentific Coauthorship Networks</h1>";
+                document.getElementById("corpo1").innerHTML = "<p align=\"justify\">Project developed by the master student of the DCC/UFMG, Geraldo José Pessoa Junior, under the supervised of Prof. Dr. Alberto Henrique Frade Laender. This project aims to analyze the impact of the interdisciplinarity of collaborations in scientific coauthorship networks. The Lattes Platform was used as a database for the generation of Interdiciplinary and Global coauthorship networks. The coauthoship networks (global and interdisciplinary):</p></br></br></br>";
+                document.getElementById("corpo2").innerHTML = "<center><img src=\"./img/interxglobal2.jpg\" alt=\"The Brazilian Global and Interdisciplinary Coauthorship Networks\" width=1230 height=680></center> </br>";
+                imprimeLegenda("files/coautoria"+idioma+"legenda.csv", 'corpo3');
+                document.getElementById("corpo4").innerHTML = "</br><p align=\"justify\">We will present the results of the analyzes of these networks considering: the percentage of collaboration among the eight major areas proposed by Lattes (Agrarian Science, Applied and Social Science, Biological Science, Engineering, Exact and Earth Science, Health Science, Humanities and Linguistic, Letters and Arts), the analysis considering the five geographic regions of Brazil (Center-West, North, Northeast, South and Southeast), the analysis the academic age of the researcher (up to 10 years, 10-20 years, and over 20 years) and finally, the temporal analysis of the quantity of publications between two great areas.</p>";
+             }
+             else if(idioma == 1)
+             {
+               document.getElementById("texto").innerHTML = "<h1>Colaborações Interdisciplinares em Redes de Coautoria Científicas</h1>";
+               document.getElementById("corpo1").innerHTML = "<p align=\"justify\">Projeto desenvolvido pelo aluno de mestrado do DCC/UFMG, Geraldo José Pessoa Júnior, sob orientação do Prof. Dr. Alberto Henrique Frade Laender. Este projeto tem como objetivo analisar o impacto da interdisciplinaridade das colaborações em redes de coautoria científica. A plataforma Lattes foi usada como base de dados para a geração das redes interdisciplinares e globais de coautoria. As redes de coautoria (globais e interdisciplinares):</p></br></br></br>";
+                document.getElementById("corpo2").innerHTML = "<center><img src=\"./img/interxglobal1.jpg\" alt=\"As Redes Brasileiras de Coautoria Global e Interdisciplinar\" width=1230 height=680></center> </br>";
+                imprimeLegenda("files/coautoria"+idioma+"legenda.csv", 'corpo3');
+                document.getElementById("corpo4").innerHTML = "</br><p align=\"justify\">Apresentaremos os resultados das análises dessas redes considerando: o percentual de colaboração entre as oito principais áreas propostas por Lattes (Ciências Agrárias, Ciências Biológicas, Ciências da Saúde, Ciências Exatas e da Terra, Ciências Humanas, Ciências Sociais e Aplicadas, Engenharias e Linguística , Letras e Artes), a análise considerando as cinco regiões geográficas do Brasil (Centro-Oeste, Nordeste, Norte, Sudeste e Sul), a análise da idade acadêmica do pesquisador (até 10 anos, 10-20 anos, e mais 20 anos) e, finalmente, a análise temporal da quantidade de publicações entre duas grandes áreas.</p>";
+             }      
+
+        }
+  </script>
+    <script>
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+	function imprimeLegenda(arquivo, divsvg)
+        {
+
+             var legendRectSize = 18;                              
+             
+             var legendSpacing = 4; 
+             
+             var color = d3.scale.ordinal(d3.schemeCategory20b);
+ 
+             
+             var margin = {top: 0, right: 10, bottom: 30, left: 32},
+			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
+			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
+
+
+//cria o svg que receberá o Grafico
+	     var svg = d3.select("div#"+divsvg).append("svg")
+		  .attr("width", width + margin.left + margin.right)
+		  .attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+             
+             d3.csv(arquivo, function(dataset) {  
+
+//Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
+		 var legend = svg.selectAll(".legend")                     
+		    .data(dataset)                                   
+		    .enter()                                                
+		    .append('g')                                            
+		    .attr('class', 'legend')    ;                            
+		    //.attr('transform', function(d, i) {                     
+		       //var height = legendRectSize + legendSpacing;          
+		       //var offset =  height * color.domain().length / 2;     
+		       //var horz = legendRectSize;                       
+		       //var vert = i * height - offset;                       
+		       //return 'translate(' + horz + ',' + vert + ')';        
+		       //});
+
+                 legend.append('rect')                                      // NEW
+                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
+                    .style('fill', function(d) {return d.color})            // NEW
+                    .style('stroke', color);                                // NEW                                                     
+//Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30+22;})
+                    .style("font-size", "16px")              
+		    .text(function(d) {return d.great_area1;});
+                                      
+	     });
+	}
+        
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+
+        function sum(arr) {
+          return arr.reduce(function (a, b) {
+             return a + b;
+           }, 0);
+        }
+  </script>
+  <script> atualiza_div(2);</script>  
   </body>
 </html>
