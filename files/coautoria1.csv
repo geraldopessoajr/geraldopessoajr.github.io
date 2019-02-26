@@ -1,57 +1,57 @@
 great_area1,great_area2,color,sigla,coautoria
-Ciências Agrárias,Ciencias_Biologicas,"#4D473F",BS,53.1
-Ciências Agrárias,Ciências_da_Saude,"#D883FB",HS,12.9
-Ciências Agrárias,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,19.2
-Ciências Agrárias,Ciencias_Humanas,"#79C000",H,2.4
-Ciências Agrárias,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,2.4
-Ciências Agrárias,Engenharias,"#3ABC91",E,9.7
-Ciências Agrárias,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,0.2
-Ciências Biológicas,Ciencias_Agrarias,"#F65385",AS,30.7
-Ciências Biológicas,Ciências_da_Saude,"#D883FB",HS,41.4
-Ciências Biológicas,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,19.7
-Ciências Biológicas,Ciencias_Humanas,"#79C000",H,2.8
-Ciências Biológicas,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,0.9
-Ciências Biológicas,Engenharias,"#3ABC91",E,4.3
-Ciências Biológicas,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,0.2
-Ciências da Saúde,Ciencias_Agrarias,"#F65385",AS,9.2
-Ciências da Saúde,Ciencias_Biologicas,"#4D473F",BS,51.1
-Ciências da Saúde,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,18.2
-Ciências da Saúde,Ciencias_Humanas,"#79C000",H,10.8
-Ciências da Saúde,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,3.3
-Ciências da Saúde,Engenharias,"#3ABC91",E,6.1
-Ciências da Saúde,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,1.3
-Ciências Exatas e da Terra,Ciencias_Agrarias,"#F65385",AS,13.3
-Ciências Exatas e da Terra,Ciencias_Biologicas,"#4D473F",BS,23.7
-Ciências Exatas e da Terra,Ciências_da_Saude,"#D883FB",HS,17.6
-Ciências Exatas e da Terra,Ciencias_Humanas,"#79C000",H,4.4
-Ciências Exatas e da Terra,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,1.8
-Ciências Exatas e da Terra,Engenharias,"#3ABC91",E,38.9
-Ciências Exatas e da Terra,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,0.3
-Ciências Humanas,Ciencias_Agrarias,"#F65385",AS,5.3
-Ciências Humanas,Ciencias_Biologicas,"#4D473F",BS,11.2
-Ciências Humanas,Ciências_da_Saude,"#D883FB",HS,34.2
-Ciências Humanas,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,14.7
-Ciências Humanas,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,18.0
-Ciências Humanas,Engenharias,"#3ABC91",E,5.0
-Ciências Humanas,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,11.6
-Ciências Sociais e Aplicadas,Ciencias_Agrarias,"#F65385",AS,10.3
-Ciências Sociais e Aplicadas,Ciencias_Biologicas,"#4D473F",BS,6.6
-Ciências Sociais e Aplicadas,Ciências_da_Saude,"#D883FB",HS,19.1
-Ciências Sociais e Aplicadas,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,10.7
-Ciências Sociais e Aplicadas,Ciencias_Humanas,"#79C000",H,32.4
-Ciências Sociais e Aplicadas,Engenharias,"#3ABC91",E,15.3
-Ciências Sociais e Aplicadas,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,5.6
-Engenharias,Ciencias_Agrarias,"#F65385",AS,11.0
-Engenharias,Ciencias_Biologicas,"#4D473F",BS,8.4
-Engenharias,Ciências_da_Saude,"#D883FB",HS,9.6
-Engenharias,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,64.0
-Engenharias,Ciencias_Humanas,"#79C000",H,2.5
-Engenharias,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,4.2
-Engenharias,Linguistica_Letras_e_Artes,"#BEBEBE",LLA,0.3
-Linguística Letras e Artes,Ciencias_Agrarias,"#F65385",AS,1.6
-Linguística Letras e Artes,Ciencias_Biologicas,"#4D473F",BS,3.3
-Linguística Letras e Artes,Ciências_da_Saude,"#D883FB",HS,19.0
-Linguística Letras e Artes,Ciencias_Exatas_e_da_Terra,"#3FC0FD",EES,4.8
-Linguística Letras e Artes,Ciencias_Humanas,"#79C000",H,53.9
-Linguística Letras e Artes,Ciencias_Sociais_e_Aplicadas,"#F18818",ASS,14.5
-Linguística Letras e Artes,Engenharias,"#3ABC91",E,2.9
+Ciências Agrárias,Ciencias_Biologicas,"#4D5048",BS,53.1
+Ciências Agrárias,Ciências_da_Saude,"#DD87FB",HS,12.9
+Ciências Agrárias,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,19.2
+Ciências Agrárias,Ciencias_Humanas,"#74BF00",H,2.4
+Ciências Agrárias,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,2.4
+Ciências Agrárias,Engenharias,"#3BBE90",E,9.7
+Ciências Agrárias,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,0.2
+Ciências Biológicas,Ciencias_Agrarias,"#F65852",AS,30.7
+Ciências Biológicas,Ciências_da_Saude,"#DD87FB",HS,41.4
+Ciências Biológicas,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,19.7
+Ciências Biológicas,Ciencias_Humanas,"#74BF00",H,2.8
+Ciências Biológicas,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,0.9
+Ciências Biológicas,Engenharias,"#3BBE90",E,4.3
+Ciências Biológicas,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,0.2
+Ciências da Saúde,Ciencias_Agrarias,"#F65852",AS,9.2
+Ciências da Saúde,Ciencias_Biologicas,"#4D5048",BS,51.1
+Ciências da Saúde,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,18.2
+Ciências da Saúde,Ciencias_Humanas,"#74BF00",H,10.8
+Ciências da Saúde,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,3.3
+Ciências da Saúde,Engenharias,"#3BBE90",E,6.1
+Ciências da Saúde,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,1.3
+Ciências Exatas e da Terra,Ciencias_Agrarias,"#F65852",AS,13.3
+Ciências Exatas e da Terra,Ciencias_Biologicas,"#4D5048",BS,23.7
+Ciências Exatas e da Terra,Ciências_da_Saude,"#DD87FB",HS,17.6
+Ciências Exatas e da Terra,Ciencias_Humanas,"#74BF00",H,4.4
+Ciências Exatas e da Terra,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,1.8
+Ciências Exatas e da Terra,Engenharias,"#3BBE90",E,38.9
+Ciências Exatas e da Terra,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,0.3
+Ciências Humanas,Ciencias_Agrarias,"#F65852",AS,5.3
+Ciências Humanas,Ciencias_Biologicas,"#4D5048",BS,11.2
+Ciências Humanas,Ciências_da_Saude,"#DD87FB",HS,34.2
+Ciências Humanas,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,14.7
+Ciências Humanas,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,18.0
+Ciências Humanas,Engenharias,"#3BBE90",E,5.0
+Ciências Humanas,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,11.6
+Ciências Sociais e Aplicadas,Ciencias_Agrarias,"#F65852",AS,10.3
+Ciências Sociais e Aplicadas,Ciencias_Biologicas,"#4D5048",BS,6.6
+Ciências Sociais e Aplicadas,Ciências_da_Saude,"#DD87FB",HS,19.1
+Ciências Sociais e Aplicadas,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,10.7
+Ciências Sociais e Aplicadas,Ciencias_Humanas,"#74BF00",H,32.4
+Ciências Sociais e Aplicadas,Engenharias,"#3BBE90",E,15.3
+Ciências Sociais e Aplicadas,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,5.6
+Engenharias,Ciencias_Agrarias,"#F65852",AS,11.0
+Engenharias,Ciencias_Biologicas,"#4D5048",BS,8.4
+Engenharias,Ciências_da_Saude,"#DD87FB",HS,9.6
+Engenharias,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,64.0
+Engenharias,Ciencias_Humanas,"#74BF00",H,2.5
+Engenharias,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,4.2
+Engenharias,Linguistica_Letras_e_Artes,"#D1B7A9",LLA,0.3
+Linguística Letras e Artes,Ciencias_Agrarias,"#F65852",AS,1.6
+Linguística Letras e Artes,Ciencias_Biologicas,"#4D5048",BS,3.3
+Linguística Letras e Artes,Ciências_da_Saude,"#DD87FB",HS,19.0
+Linguística Letras e Artes,Ciencias_Exatas_e_da_Terra,"#3FC0FF",EES,4.8
+Linguística Letras e Artes,Ciencias_Humanas,"#74BF00",H,53.9
+Linguística Letras e Artes,Ciencias_Sociais_e_Aplicadas,"#F88B16",ASS,14.5
+Linguística Letras e Artes,Engenharias,"#3BBE90",E,2.9

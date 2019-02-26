@@ -1,57 +1,57 @@
 great_area1,great_area2,color,sigla,coautoria
-Agrarian Sciences,Applied_and_Social_Sciences,"#F18818",ASS,2.4
-Agrarian Sciences,Biological_Sciences,"#4D473F",BS,53.1
-Agrarian Sciences,Engineering,"#3ABC91",E,9.7
-Agrarian Sciences,Exact_and_Earth Sciences,"#3FC0FD",EES,19.2
-Agrarian Sciences,Health_Sciences,"#D883FB",HS,12.9
-Agrarian Sciences,Humanities,"#79C000",H,2.4
-Agrarian Sciences,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,0.2
-Applied and Social Sciences,Agrarian_Sciences,"#F65385",AS,10.3
-Applied and Social Sciences,Biological_Sciences,"#3ABC91",BS,6.6
-Applied and Social Sciences,Engineering,"#4D473F",E,15.3
-Applied and Social Sciences,Exact_and_Earth Sciences,"#3FC0FD",EES,10.7
-Applied and Social Sciences,Health_Sciences,"#D883FB",HS,19.1
-Applied and Social Sciences,Humanities,"#79C000",H,32.4
-Applied and Social Sciences,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,5.6
-Biological Sciences,Agrarian_Sciences,"#F65385",AS,30.7
-Biological Sciences,Applied_and_Social_Sciences,"#F18818",ASS,0.9
-Biological Sciences,Engineering,"#3ABC91",E,4.3
-Biological Sciences,Exact_and_Earth Sciences,"#3FC0FD",EES,19.7
-Biological Sciences,Health_Sciences,"#D883FB",HS,41.4
-Biological Sciences,Humanities,"#79C000",H,2.8
-Biological Sciences,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,0.2
-Engineering,Agrarian_Sciences,"#F65385",AS,11.0
-Engineering,Applied_and_Social_Sciences,"#F18818",ASS,4.2
-Engineering,Biological_Sciences,"#4D473F",BS,8.4
-Engineering,Exact_and_Earth Sciences,"#3FC0FD",EES,64.0
-Engineering,Health_Sciences,"#D883FB",HS,9.6
-Engineering,Humanities,"#79C000",H,2.5
-Engineering,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,0.3
-Exact and Earth Sciences,Agrarian_Sciences,"#F65385",AS,13.3
-Exact and Earth Sciences,Applied_and_Social_Sciences,"#F18818",ASS,1.8
-Exact and Earth Sciences,Biological_Sciences,"#4D473F",BS,23.7
-Exact and Earth Sciences,Engineering,"#3ABC91",E,38.9
-Exact and Earth Sciences,Health_Sciences,"#D883FB",HS,17.6
-Exact and Earth Sciences,Humanities,"#79C000",H,4.4
-Exact and Earth Sciences,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,0.3
-Health Sciences,Agrarian_Sciences,"#F65385",AS,9.2
-Health Sciences,Applied_and_Social_Sciences,"#F18818",ASS,3.3
-Health Sciences,Biological_Sciences,"#4D473F",BS,51.1
-Health Sciences,Engineering,"#3ABC91",E,6.1
-Health Sciences,Exact_and_Earth Sciences,"#3FC0FD",EES,18.2
-Health Sciences,Humanities,"#79C000",H,10.8
-Health Sciences,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,1.3
-Humanities,Agrarian_Sciences,"#F65385",AS,5.3
-Humanities,Applied_and_Social_Sciences,"#F18818",ASS,18.0
-Humanities,Biological_Sciences,"#4D473F",BS,11.2
-Humanities,Engineering,"#3ABC91",E,5.0
-Humanities,Exact_and_Earth Sciences,"#3FC0FD",EES,14.7
-Humanities,Health_Sciences,"#D883FB",HS,34.2
-Humanities,Linguistics_Letters_and_Arts,"#BEBEBE",LLA,11.6
-Linguistics Letters and Arts,Agrarian_Sciences,"#F65385",AS,1.6
-Linguistics Letters and Arts,Applied_and_Social_Sciences,"#F18818",ASS,14.5
-Linguistics Letters and Arts,Biological_Sciences,"#4D473F",BS,3.3
-Linguistics Letters and Arts,Engineering,"#3ABC91",E,2.9
-Linguistics Letters and Arts,Exact_and_Earth Sciences,"#3FC0FD",EES,4.8
-Linguistics Letters and Arts,Health_Sciences,"#D883FB",HS,19.0
-Linguistics Letters and Arts,Humanities,"#79C000",H,53.9
+Agrarian Sciences,Applied_and_Social_Sciences,"#F88B16",ASS,2.4
+Agrarian Sciences,Biological_Sciences,"#4D5048",BS,53.1
+Agrarian Sciences,Engineering,"#3BBE90",E,9.7
+Agrarian Sciences,Exact_and_Earth Sciences,"#3FC0FF",EES,19.2
+Agrarian Sciences,Health_Sciences,"#DD87FB",HS,12.9
+Agrarian Sciences,Humanities,"#74BF00",H,2.4
+Agrarian Sciences,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,0.2
+Applied and Social Sciences,Agrarian_Sciences,"#F65852",AS,10.3
+Applied and Social Sciences,Biological_Sciences,"#3BBE90",BS,6.6
+Applied and Social Sciences,Engineering,"#4D5048",E,15.3
+Applied and Social Sciences,Exact_and_Earth Sciences,"#3FC0FF",EES,10.7
+Applied and Social Sciences,Health_Sciences,"#DD87FB",HS,19.1
+Applied and Social Sciences,Humanities,"#74BF00",H,32.4
+Applied and Social Sciences,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,5.6
+Biological Sciences,Agrarian_Sciences,"#F65852",AS,30.7
+Biological Sciences,Applied_and_Social_Sciences,"#F88B16",ASS,0.9
+Biological Sciences,Engineering,"#3BBE90",E,4.3
+Biological Sciences,Exact_and_Earth Sciences,"#3FC0FF",EES,19.7
+Biological Sciences,Health_Sciences,"#DD87FB",HS,41.4
+Biological Sciences,Humanities,"#74BF00",H,2.8
+Biological Sciences,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,0.2
+Engineering,Agrarian_Sciences,"#F65852",AS,11.0
+Engineering,Applied_and_Social_Sciences,"#F88B16",ASS,4.2
+Engineering,Biological_Sciences,"#4D5048",BS,8.4
+Engineering,Exact_and_Earth Sciences,"#3FC0FF",EES,64.0
+Engineering,Health_Sciences,"#DD87FB",HS,9.6
+Engineering,Humanities,"#74BF00",H,2.5
+Engineering,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,0.3
+Exact and Earth Sciences,Agrarian_Sciences,"#F65852",AS,13.3
+Exact and Earth Sciences,Applied_and_Social_Sciences,"#F88B16",ASS,1.8
+Exact and Earth Sciences,Biological_Sciences,"#4D5048",BS,23.7
+Exact and Earth Sciences,Engineering,"#3BBE90",E,38.9
+Exact and Earth Sciences,Health_Sciences,"#DD87FB",HS,17.6
+Exact and Earth Sciences,Humanities,"#74BF00",H,4.4
+Exact and Earth Sciences,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,0.3
+Health Sciences,Agrarian_Sciences,"#F65852",AS,9.2
+Health Sciences,Applied_and_Social_Sciences,"#F88B16",ASS,3.3
+Health Sciences,Biological_Sciences,"#4D5048",BS,51.1
+Health Sciences,Engineering,"#3BBE90",E,6.1
+Health Sciences,Exact_and_Earth Sciences,"#3FC0FF",EES,18.2
+Health Sciences,Humanities,"#74BF00",H,10.8
+Health Sciences,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,1.3
+Humanities,Agrarian_Sciences,"#F65852",AS,5.3
+Humanities,Applied_and_Social_Sciences,"#F88B16",ASS,18.0
+Humanities,Biological_Sciences,"#4D5048",BS,11.2
+Humanities,Engineering,"#3BBE90",E,5.0
+Humanities,Exact_and_Earth Sciences,"#3FC0FF",EES,14.7
+Humanities,Health_Sciences,"#DD87FB",HS,34.2
+Humanities,Linguistics_Letters_and_Arts,"#D1B7A9",LLA,11.6
+Linguistics Letters and Arts,Agrarian_Sciences,"#F65852",AS,1.6
+Linguistics Letters and Arts,Applied_and_Social_Sciences,"#F88B16",ASS,14.5
+Linguistics Letters and Arts,Biological_Sciences,"#4D5048",BS,3.3
+Linguistics Letters and Arts,Engineering,"#3BBE90",E,2.9
+Linguistics Letters and Arts,Exact_and_Earth Sciences,"#3FC0FF",EES,4.8
+Linguistics Letters and Arts,Health_Sciences,"#DD87FB",HS,19.0
+Linguistics Letters and Arts,Humanities,"#74BF00",H,53.9
