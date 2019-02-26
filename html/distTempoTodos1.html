@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Collaborations per Geographical Region</title>
+    <title>Temporal analysis</title>
     <script src="../js/d3.v3.min.js"></script>
     <script src="../js/d3.tip.v0.6.3.js"></script>
     <!-- Bootstrap core CSS -->
@@ -16,10 +16,11 @@
     
 
     <!-- Custom styles for this template -->
-    <link href="../css/style1.css" rel="stylesheet">
+    <link href="../css/style7.css" rel="stylesheet">
   </head>
-  <body>
 
+  <body>
+   
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="../index.html">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +72,7 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>Collaborations per Geographical Region</h1>
+        <h1>Temporal analysis</h1>
         <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
       </div>
 
@@ -86,29 +87,25 @@
 	      <option value="2" selected>English</option>
 	    </select>
 	  </div>
-       </div>
-       </br></br>
+        </div>
+        </br></br>
 	  <div id="corpo1" style="display: flex;justify-content: space-between;">
 	    <div id="corpo1-1">
-	    </div>  
-	    <div id="corpo1-2">
 	    </div>
 	  </div>
-
-	  <div id="corpo2" style="display: flex;justify-content: space-between;">
+          <br><br>
+          <div id="corpo2" style="display: flex;justify-content: space-between;">
 	    <div id="corpo2-1">
-	    </div>  
-	    <div id="corpo2-2">
 	    </div>
 	  </div>
-
-	  <div id="corpo3" style="display: flex;justify-content: space-between;">
+          <div id="corpo3" style="display: flex;justify-content: space-between;">
 	    <div id="corpo3-1">
-	    </div>  
-	    <div id="corpo3-2">
-	    </div> 
+	    </div>
+	  </div>
+	  <div id="corpo5" style="display: flex;justify-content: space-between;">
 	  </div>
   </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -119,63 +116,49 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!--Inicio do JavaScript no Código-->
   <script>
-        function atualiza_div(idioma)
+        function atualiza_div(idioma, area)
 	{
 	     d3.select("svg").remove();
-	     d3.select("svg").remove();
-             d3.select("svg").remove();
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
              
              if(idioma == 2)
              {
-		     imprimeGrafico("Central-West", "../files/region"+idioma+".csv", 'corpo1-1');
-		     imprimeGrafico("North", "../files/region"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico("Northeast", "../files/region"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico("South", "../files/region"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico("Southeast", "../files/region"+idioma+".csv", 'corpo3-1');
-		     imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo3-2');
+		  imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1');
+                  imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo2-1');
+                  imprimeGrafico(2, "Linguistics Letters and Arts", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo3-1');
+		  imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
              }
              else if(idioma == 1)
              {
-		     imprimeGrafico("Centro-Oeste", "../files/region"+idioma+".csv", 'corpo1-1');
-		     imprimeGrafico("Nordeste", "../files/region"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico("Norte", "../files/region"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico("Sudeste", "../files/region"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico("Sul", "../files/region"+idioma+".csv", 'corpo3-1');
-		     imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo3-2');
+		  imprimeGrafico(1, "Ciências Humanas", "../files/at_cienciashumanas"+idioma+".csv", 'corpo1-1');
+                  imprimeGrafico(1, "Ciências Sociais e Aplicadas", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo2-1');
+                  imprimeGrafico(1, "Linguística Letras e Artes", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo3-1');
+		  imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
             }
+
 	}
 
-	function imprimeGrafico(region, arquivo, divsvg)
+	function imprimeGrafico(idioma, great_area, arquivo, divsvg)
         {
 
-             var margin = {top: 30, right: 30, bottom: 30, left: 30},
+             var margin = {top: 30, right: 30, bottom: 30, left: 50},
 			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
 			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
-             var formatPercent = d3.format(".0%");
+             var parseDate = d3.time.format("%Y").parse;
 
-	     var x = d3.scale.ordinal()
-		  .rangeRoundBands([0, width+ (margin.left)], .1);
+	     var x = d3.time.scale().range([0, width]);
+             var y = d3.scale.linear().range([height, 0]);
 
-	     var y = d3.scale.linear()
-		  .range([height, 0]);
+             var xAxis = d3.svg.axis().scale(x).tickSize(5).tickPadding(6).orient("bottom").ticks(5);
+             var yAxis = d3.svg.axis().scale(y).orient("left").ticks(5);
 
-	     var xAxis = d3.svg.axis()
-		  .scale(x)
-		  .orient("bottom");
-
-             var yAxis = d3.svg.axis()
-		  .scale(y)
-		  .orient("left")
-		  .tickFormat(formatPercent);
-
-	     var tip = d3.tip()
-		  .attr('class', 'd3-tip')
-		  .offset([-10, 0])
-		  .html(function(d) {return "<span style='color:white'>" + d.coautoria + "%</span>";});
+             var line = d3.svg.line()  
+		  .interpolate("linear")
+		  .x(function(d) { return x(d.ano); })
+		  .y(function(d) { return y(d.qtde); });
 
 
 //cria o svg que receberá o Grafico
@@ -183,31 +166,66 @@
 		  .attr("width", width + (margin.left + margin.right))
 		  .attr("height", height + margin.top + margin.bottom)
 		.append("g")
-		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
-                             
-             svg.call(tip);
+		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-             var dataset = [];
-//le o csv e                 
-             d3.csv(arquivo, function(data) {  
-                  data.forEach(function(d)
-                  {   
-                    if(d.region_1 == region)// então seleciona somente os dados que atender as condições selecionadas pelo usuário
-                    {
-	             
-                       dataset.push(d);
-                    }//e as insere na variável dataset
-                  });
+// gridlines in x axis function
+function make_x_gridlines() {		
+    return d3.svg.axis().scale(x).tickSize(5).tickPadding(6).orient("bottom").ticks(5);
+}
+
+// gridlines in y axis function
+function make_y_gridlines() {		
+    return d3.svg.axis().scale(y).orient("left").ticks(5);
+} 
+                             
+             d3.csv(arquivo, function(error, data) {
+		    data.forEach(function(d) {
+				d.ano = parseDate(d.ano);
+				d.qtde = +d.qtde;
+		    });
                
-               //dataset.sort(function(a, b){return a.region-b.region});
-               x.domain(dataset.map(function(d){return d.region_2;}));
-               y.domain([0, 0.75]);
+               x.domain(d3.extent(data, function(d) { return d.ano; }));
+               y.domain([0, 0.5]);
+
+  // add the X gridlines
+  svg.append("g")			
+      .attr("class", "grid")
+      .attr("transform", "translate(0," + height + ")")
+      .call(make_x_gridlines()
+          .tickSize(-height)
+          .tickFormat("")
+      )
+
+  // add the Y gridlines
+  svg.append("g")			
+      .attr("class", "grid")
+      .call(make_y_gridlines()
+          .tickSize(-width)
+          .tickFormat("")
+      )
+
+
+		// Nest the entries by symbol
+		    var dataNest = d3.nest()
+			.key(function(d) {return d.great_area;})
+			.entries(data);
+		    var color = d3.scale.category10();
+		 // set the colour scale
+		    // Loop through each symbol / key
+		    dataNest.forEach(function(d) {
+			svg.append("path")
+			    .attr("class", "line")
+			    .style("stroke", function() { // Add dynamically
+				return d["values"][0].color; })
+			    .attr("d", line(d.values));
+		    });
 
 //definido o dominio x do gráfico
-	          svg.append("g")
-		    .attr("class", "x axis")
-		    .attr("transform", "translate(0," + height + ")")
-		    //.call(xAxis);
+                  svg.append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(xAxis);
+
 
 //definido o dominio y do gráfico
 	          svg.append("g")
@@ -218,7 +236,7 @@
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end")
-		    .text(function(){if(idioma == 1){return "Frequência";}else{return "Frequency"}});
+		    .text(function(){if(idioma == 1){return "Número de Colaborações";}else{return "Number of Collaborations"}});
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
 		  svg.append("text")
@@ -226,28 +244,7 @@
 		    .attr("y", 0 - (margin.top / 2))
 		    .attr("text-anchor", "middle")  
 		    .style("font-size", "20px") 
-		    .text(region);
-
-//Cria o gráfico. do tipo barra utilizando os dados que satisfaçam o usuário. o gráfico inicia com 0 no y e é mudado na transição
-                  var bars = svg.selectAll(".bar")
-		    .data(dataset)
-		    .enter()
-                  bars.append("rect")
-		    .attr("class", "bar")
-		    .attr("x", function(d) {return x(d.region_2)})
-		    .attr("width", x.rangeBand())
-		    .attr("y", function(d) {return y(d.region/100);})
-		    .attr("height", function(d) {return height - y(d.region/100);})
-		    .style("fill", function(d) {return d.color})
-		    .on('mouseover', tip.show)
-		    .on('mouseout', tip.hide)
-
-                 bars.append("text").text(function(d) {return d.region+"%";})
-		    .attr("x", function(d) { return x(d.region_2)+x.rangeBand()/2; })
-		    .attr("y", function(d) {return y(d.region/100)-6;})
-		    .attr("text-anchor", "middle")
-                    .style("font-size", "16px");
-
+		    .text(great_area);
                                       
 	     });
 	}
@@ -277,29 +274,32 @@
              d3.csv(arquivo, function(dataset) {  
 
 //Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
-		 var legend = svg.selectAll('.legend')                     
+		 var legend = svg.selectAll(".legend")                     
 		    .data(dataset)                                   
 		    .enter()                                                
 		    .append('g')                                            
-		    .attr('class', 'legend')                                
-		    .attr('transform', function(d, i) {                     
-		       var height = legendRectSize + legendSpacing;          
-		       var offset =  height * color.domain().length / 2;     
-		       var horz = legendRectSize;                       
-		       var vert = i * height - offset;                       
-		       return 'translate(' + horz + ',' + vert + ')';        
-		       });
+		    .attr('class', 'legend')    ;                            
+		    //.attr('transform', function(d, i) {                     
+		       //var height = legendRectSize + legendSpacing;          
+		       //var offset =  height * color.domain().length / 2;     
+		       //var horz = legendRectSize;                       
+		       //var vert = i * height - offset;                       
+		       //return 'translate(' + horz + ',' + vert + ')';        
+		       //});
 
                  legend.append('rect')                                      // NEW
-                    .attr('width', legendRectSize)                          // NEW
-                    .attr('height', legendRectSize)                         // NEW
+                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
-		    .attr('x', legendRectSize + legendSpacing)              
-		    .attr('y', legendRectSize - legendSpacing)              
-		    .text(function(d) {return d.region_1;});
+		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30+22;})
+                    .style("font-size", "16px")              
+		    .text(function(d) {return d.great_area1;});
                                       
 	     });
 	}
@@ -310,13 +310,8 @@
           return idiomas.options[idioma.selectedIndex].value
         }
 
-        function sum(arr) {
-          return arr.reduce(function (a, b) {
-             return a + b;
-           }, 0);
-        }
   </script>
 <!--Final do JavaScript no Código-->
-  <script> atualiza_div(2);</script>
+  <script> atualiza_div(2, 1);</script>
 </body>
 </html>

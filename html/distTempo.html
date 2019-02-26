@@ -41,6 +41,8 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="./region.html">per Region</a>
               <a class="dropdown-item" href="./regionTodos.html">All Regions</a>
+              <a class="dropdown-item" href="./regionGreatArea.html">Great Areas</a>
+              <a class="dropdown-item" href="./regionperGreatArea.html">Great Areas (per Region)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -58,7 +60,9 @@
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Temporal analysis</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="./distTempo.html">per Great Area</a>
-              <a class="dropdown-item" href="./distTempoTodos.html">All Great Areas</a>
+              <a class="dropdown-item" href="./distTempoTodos1.html">All Great Areas [< 2k]</a>
+              <a class="dropdown-item" href="./distTempoTodos2.html">All Great Areas [2k, 4k]</a>
+              <a class="dropdown-item" href="./distTempoTodos3.html">All Great Areas [> 4k]</a>
             </div>
           </li>
         </ul>
@@ -128,7 +132,7 @@
                   {
                     dataset = {
 		                "series": ["Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                         
-                                "colors": ["#F18818", "#4d473F", "#3ABC91", "#3FC0FD", "#D883FB", "#79C000", "#BEBEBE"]
+                                "colors": ["#F88B16", "#4D5048", "#3BBE90", "#3FC0FF", "#DD87FB", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Agrarian Sciences", "../files/at_cienciasagrarias"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -136,7 +140,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
-                               "colors": ["#F65385", "#4d473F", "#3ABC91", "#3FC0FD", "#D883FB", "#79C000", "#BEBEBE"]
+                               "colors": ["#F65582", "#4D5048", "#3BBE90", "#3FC0FF", "#DD87FB", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -144,7 +148,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Engineering", "Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
-                               "colors": ["#F65385", "#F18818", "#3ABC91", "#3FC0FD", "#D883FB", "#79C000", "#BEBEBE"]
+                               "colors": ["#F65582", "#F88B16", "#3BBE90", "#3FC0FF", "#DD87FB", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Biological Sciences", "../files/at_cienciasbiologicas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -152,7 +156,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Exact and Earth Sciences","Health Sciences","Humanities","Linguistics Letters and Arts"],                        
-                               "colors": ["#F65385", "#F18818", "#4d473F", "#3FC0FD", "#D883FB", "#79C000", "#BEBEBE"]
+                               "colors": ["#F65582", "#F88B16", "#4D5048", "#3FC0FF", "#DD87FB", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Engineering", "../files/at_engenharias"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -160,7 +164,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Health Sciences","Humanities","Linguistics Letters and Arts"],                        
-                               "colors": ["#F65385", "#F18818", "#4d473F", "#3ABC91", "#D883FB", "#79C000", "#BEBEBE"]
+                               "colors": ["#F65582", "#F88B16", "#4D5048", "#3BBE90", "#DD87FB", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Exact and Earth Sciences", "../files/at_cienciasexatasedaterra"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -168,7 +172,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Humanities","Linguistics Letters and Arts"],            
-                               "colors": ["#F65385", "#F18818", "#4d473F", "#3ABC91", "#3FC0FD", "#79C000", "#BEBEBE"]
+                               "colors": ["#F65582", "#F88B16", "#4D5048", "#3BBE90", "#3FC0FF", "#74BF00", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Health Sciences", "../files/at_cienciasdasaude"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -176,7 +180,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Linguistics Letters and Arts"],            
-                               "colors": ["#F65385", "#F18818", "#4d473F", "#3ABC91", "#3FC0FD", "#D883FB", "#BEBEBE"]
+                               "colors": ["#F65582", "#F88B16", "#4D5048", "#3BBE90", "#3FC0FF", "#DD87FB", "#D1B7A9"]
 		       }
 		     imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -184,7 +188,7 @@
                   {
                     dataset = {
 		               "series": ["Agrarian Sciences","Applied and Social Sciences", "Biological Sciences","Engineering", "Exact and Earth Sciences","Health Sciences","Humanities"],            
-                               "colors": ["#F65385", "#F18818", "#4d473F", "#3ABC91", "#3FC0FD", "#D883FB", "#79C000"]
+                               "colors": ["#F65582", "#F88B16", "#4D5048", "#3BBE90", "#3FC0FF", "#DD87FB", "#74BF00"]
 		       }
 		     imprimeGrafico(2, "Linguistics Letters and Arts", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -195,7 +199,7 @@
                   {
   		     dataset = {
 		                 "series": ["Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],                         
-                                 "colors": ["#4d473F", "#D883FB", "#3FC0FD", "#79C000",  "#F18818", "#3ABC91", "#BEBEBE"]
+                                 "colors": ["#4D5048", "#DD87FB", "#3FC0FF", "#74BF00",  "#F88B16", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências Agrárias", "../files/at_cienciasagrarias"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -203,7 +207,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
-                         "colors": ["#F65385", "#D883FB", "#3FC0FD", "#79C000",  "#F18818", "#3ABC91", "#BEBEBE"]
+                         "colors": ["#F65582", "#DD87FB", "#3FC0FF", "#74BF00",  "#F88B16", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências Biológicas", "../files/at_cienciasbiologicas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -211,7 +215,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
-                         "colors": ["#F65385", "#4d473F", "#3FC0FD", "#79C000",  "#F18818", "#3ABC91", "#BEBEBE"]
+                         "colors": ["#F65582", "#4D5048", "#3FC0FF", "#74BF00",  "#F88B16", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências da Saúde", "../files/at_cienciasdasaude"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -219,7 +223,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde", "Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
-                         "colors": ["#F65385", "#4d473F", "#D883FB", "#79C000",  "#F18818", "#3ABC91", "#BEBEBE"]
+                         "colors": ["#F65582", "#4D5048", "#DD87FB", "#74BF00",  "#F88B16", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências Exatas e da Terra", "../files/at_cienciasexatasedaterra"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -227,7 +231,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Sociais e Aplicadas","Engenharias","Linguitíca Letras e Artes"],        
-                         "colors": ["#F65385", "#4d473F", "#D883FB", "#3FC0FD", "#F18818", "#3ABC91", "#BEBEBE"]
+                         "colors": ["#F65582", "#4D5048", "#DD87FB", "#3FC0FF", "#F88B16", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências Humanas", "../files/at_cienciashumanas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -235,7 +239,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Engenharias","Linguitíca Letras e Artes"],        
-                         "colors": ["#F65385", "#4d473F", "#D883FB", "#3FC0FD", "#79C000", "#3ABC91", "#BEBEBE"]
+                         "colors": ["#F65582", "#4D5048", "#DD87FB", "#3FC0FF", "#74BF00", "#3BBE90", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Ciências Sociais e Aplicadas", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -243,7 +247,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Linguitíca Letras e Artes"],                 
-                         "colors": ["#F65385", "#4d473F", "#D883FB", "#3FC0FD", "#79C000",  "#F18818", "#BEBEBE"]
+                         "colors": ["#F65582", "#4D5048", "#DD87FB", "#3FC0FF", "#74BF00",  "#F88B16", "#D1B7A9"]
 		         }
 		     imprimeGrafico(1, "Engenharias", "../files/at_engenharias"+idioma+".csv", 'corpo1-1', dataset);
                   }
@@ -251,7 +255,7 @@
                   {
   		     dataset = {
 		         "series": ["Ciências Agrárias","Ciências Biológicas","Ciências da Saúde","Ciências Exatas e da Terra","Ciências Humanas","Ciências Sociais e Aplicadas","Engenharias"],
-                         "colors": ["#F65385", "#4d473F", "#D883FB", "#3FC0FD", "#79C000",  "#F18818", "#3ABC91"]
+                         "colors": ["#F65582", "#4D5048", "#DD87FB", "#3FC0FF", "#74BF00",  "#F88B16", "#3BBE90"]
 		         }
 		     imprimeGrafico(1, "Linguística Letras e Artes", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo1-1', dataset);
                   }

@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,16 +7,18 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Collaborations per Geographical Region</title>
+    <title>On Interdisciplinary Collaborations in Scentific Coauthorship Networks</title>
     <script src="../js/d3.v3.min.js"></script>
     <script src="../js/d3.tip.v0.6.3.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 
     <!-- Custom styles for this template -->
-    <link href="../css/style1.css" rel="stylesheet">
+    <link href="../css/style6.css" rel="stylesheet">
   </head>
+
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -69,12 +70,10 @@
     </nav>
 
     <main role="main" class="container">
-
-      <div class="starter-template">
-        <h1>Collaborations per Geographical Region</h1>
+       <div class="starter-template">
+        <h1>Collaboration Patterns between Brazilian Geographic Regions</h1>
         <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
       </div>
-
     </main><!-- /.container -->
 
   <div id="corpo">
@@ -89,24 +88,17 @@
        </div>
        </br></br>
 	  <div id="corpo1" style="display: flex;justify-content: space-between;">
-	    <div id="corpo1-1">
-	    </div>  
-	    <div id="corpo1-2">
-	    </div>
+	    <div id="corpo1-1"></div>  
+	    <div id="corpo1-2"></div>
+            <div id="corpo1-3"></div>
 	  </div>
 
 	  <div id="corpo2" style="display: flex;justify-content: space-between;">
-	    <div id="corpo2-1">
-	    </div>  
-	    <div id="corpo2-2">
+	    <div id="corpo2-1"></div>  
+	    <div id="corpo2-2"></div>
+          <div id="corpo2-3">
 	    </div>
 	  </div>
-
-	  <div id="corpo3" style="display: flex;justify-content: space-between;">
-	    <div id="corpo3-1">
-	    </div>  
-	    <div id="corpo3-2">
-	    </div> 
 	  </div>
   </div>
 
@@ -115,142 +107,40 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!--Inicio do JavaScript no Código-->
   <script>
         function atualiza_div(idioma)
-	{
+        {
 	     d3.select("svg").remove();
-	     d3.select("svg").remove();
-             d3.select("svg").remove();
-	     d3.select("svg").remove();
-	     d3.select("svg").remove();
-	     d3.select("svg").remove();
-             
              if(idioma == 2)
              {
-		     imprimeGrafico("Central-West", "../files/region"+idioma+".csv", 'corpo1-1');
-		     imprimeGrafico("North", "../files/region"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico("Northeast", "../files/region"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico("South", "../files/region"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico("Southeast", "../files/region"+idioma+".csv", 'corpo3-1');
-		     imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo3-2');
+
+                document.getElementById("corpo1-1").innerHTML = "<h5>Central West</h5><br> <center><img src=\"../img/CO.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-3").innerHTML = "<h5>Northeast</h5><br> <center><img src=\"../img/ND.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-2").innerHTML = "<h5>North</h5><br> <center><img src=\"../img/N.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-2").innerHTML = "<h5>Southeast</h5><br> <center><img src=\"../img/SD.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-1").innerHTML = "<h5>South</h5><br> <center><img src=\"../img/S.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
              }
              else if(idioma == 1)
              {
-		     imprimeGrafico("Centro-Oeste", "../files/region"+idioma+".csv", 'corpo1-1');
-		     imprimeGrafico("Nordeste", "../files/region"+idioma+".csv", 'corpo1-2');
-		     imprimeGrafico("Norte", "../files/region"+idioma+".csv", 'corpo2-1');
-		     imprimeGrafico("Sudeste", "../files/region"+idioma+".csv", 'corpo2-2');
-		     imprimeGrafico("Sul", "../files/region"+idioma+".csv", 'corpo3-1');
-		     imprimeLegenda("../files/region"+idioma+"legenda.csv", 'corpo3-2');
-            }
-	}
+                document.getElementById("corpo1-1").innerHTML = "<h5>Centro Oeste</h5><br> <center><img src=\"../img/CO.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-2").innerHTML = "<h5>Nordeste</h5><br> <center><img src=\"../img/ND.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-3").innerHTML = "<h5>Norte</h5><br> <center><img src=\"../img/N.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-1").innerHTML = "<h5>Sudeste</h5><br> <center><img src=\"../img/SD.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-2").innerHTML = "<h5>Sul</h5><br> <center><img src=\"../img/S.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
+             }      
 
-	function imprimeGrafico(region, arquivo, divsvg)
+        }
+  </script>
+    <script>
+        function get_idioma()
         {
-
-             var margin = {top: 30, right: 30, bottom: 30, left: 30},
-			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
-			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
-
-             var formatPercent = d3.format(".0%");
-
-	     var x = d3.scale.ordinal()
-		  .rangeRoundBands([0, width+ (margin.left)], .1);
-
-	     var y = d3.scale.linear()
-		  .range([height, 0]);
-
-	     var xAxis = d3.svg.axis()
-		  .scale(x)
-		  .orient("bottom");
-
-             var yAxis = d3.svg.axis()
-		  .scale(y)
-		  .orient("left")
-		  .tickFormat(formatPercent);
-
-	     var tip = d3.tip()
-		  .attr('class', 'd3-tip')
-		  .offset([-10, 0])
-		  .html(function(d) {return "<span style='color:white'>" + d.coautoria + "%</span>";});
-
-
-//cria o svg que receberá o Grafico
-	     var svg = d3.select("div#"+divsvg).append("svg")
-		  .attr("width", width + (margin.left + margin.right))
-		  .attr("height", height + margin.top + margin.bottom)
-		.append("g")
-		  .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
-                             
-             svg.call(tip);
-
-             var dataset = [];
-//le o csv e                 
-             d3.csv(arquivo, function(data) {  
-                  data.forEach(function(d)
-                  {   
-                    if(d.region_1 == region)// então seleciona somente os dados que atender as condições selecionadas pelo usuário
-                    {
-	             
-                       dataset.push(d);
-                    }//e as insere na variável dataset
-                  });
-               
-               //dataset.sort(function(a, b){return a.region-b.region});
-               x.domain(dataset.map(function(d){return d.region_2;}));
-               y.domain([0, 0.75]);
-
-//definido o dominio x do gráfico
-	          svg.append("g")
-		    .attr("class", "x axis")
-		    .attr("transform", "translate(0," + height + ")")
-		    //.call(xAxis);
-
-//definido o dominio y do gráfico
-	          svg.append("g")
-		    .attr("class", "y axis")
-		    .call(yAxis)
-		    .append("text")
-		    .attr("transform", "rotate(-90)")
-		    .attr("y", 6)
-		    .attr("dy", ".71em")
-		    .style("text-anchor", "end")
-		    .text(function(){if(idioma == 1){return "Frequência";}else{return "Frequency"}});
-
-//Título do Gráfico *tittle* é adicionado aqui no svg
-		  svg.append("text")
-		    .attr("x", (width / 2))             
-		    .attr("y", 0 - (margin.top / 2))
-		    .attr("text-anchor", "middle")  
-		    .style("font-size", "20px") 
-		    .text(region);
-
-//Cria o gráfico. do tipo barra utilizando os dados que satisfaçam o usuário. o gráfico inicia com 0 no y e é mudado na transição
-                  var bars = svg.selectAll(".bar")
-		    .data(dataset)
-		    .enter()
-                  bars.append("rect")
-		    .attr("class", "bar")
-		    .attr("x", function(d) {return x(d.region_2)})
-		    .attr("width", x.rangeBand())
-		    .attr("y", function(d) {return y(d.region/100);})
-		    .attr("height", function(d) {return height - y(d.region/100);})
-		    .style("fill", function(d) {return d.color})
-		    .on('mouseover', tip.show)
-		    .on('mouseout', tip.hide)
-
-                 bars.append("text").text(function(d) {return d.region+"%";})
-		    .attr("x", function(d) { return x(d.region_2)+x.rangeBand()/2; })
-		    .attr("y", function(d) {return y(d.region/100)-6;})
-		    .attr("text-anchor", "middle")
-                    .style("font-size", "16px");
-
-                                      
-	     });
-	}
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
 
 	function imprimeLegenda(arquivo, divsvg)
         {
@@ -299,24 +189,11 @@
 		 legend.append('text')                                     
 		    .attr('x', legendRectSize + legendSpacing)              
 		    .attr('y', legendRectSize - legendSpacing)              
-		    .text(function(d) {return d.region_1;});
+		    .text(function(d) {return d.great_area1;});
                                       
 	     });
 	}
-        
-        function get_idioma()
-        {
-          var idiomas = document.getElementById('idioma')
-          return idiomas.options[idioma.selectedIndex].value
-        }
-
-        function sum(arr) {
-          return arr.reduce(function (a, b) {
-             return a + b;
-           }, 0);
-        }
   </script>
-<!--Final do JavaScript no Código-->
-  <script> atualiza_div(2);</script>
-</body>
+  <script> atualiza_div(2);</script>  
+  </body>
 </html>
