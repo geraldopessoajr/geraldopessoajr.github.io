@@ -308,7 +308,7 @@ function make_y_gridlines() {
 		    });
                
                x.domain(d3.extent(data, function(d) { return d.ano; }));
-               y.domain([0, (1.10*d3.max(data, function(d) {return (parseInt(d.qtde));}))]);
+               y.domain([0, 0.5]);
 
   // add the X gridlines
   svg.append("g")			
@@ -358,7 +358,7 @@ function make_y_gridlines() {
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end")
-		    .text(function(){if(idioma == 1){return "Número de Colaborações";}else{return "Number of Collaborations"}});
+		    .text(function(){if(idioma == 1){return "Média de Publicações";}else{return "Average of Publications"}});
 
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
