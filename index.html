@@ -150,7 +150,7 @@
 			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
 			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 	     
-	     var comp = width - (legendRectSize*4);
+	     var comp = (width - (legendRectSize*4))/4;
              	
              console.log(comp);
 
@@ -188,7 +188,7 @@
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  legendRectSize+22;})
-                    .style("font-size", "16px")              
+                    //.style("font-size", "16px")              
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
