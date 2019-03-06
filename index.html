@@ -178,7 +178,7 @@
 		       //});
 
                  legend.append('rect')                                      // NEW
-                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+                    .attr("x", function(d, i, k){k = (i%4)*comp; return margin.right+k})
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  legendRectSize;})
                     .attr('width', legendRectSize)                          // NEW
                     .attr('height', legendRectSize)                         // NEW
@@ -186,9 +186,9 @@
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr('x', function(d, i, k){k = (i%4)*comp return margin.right+k+34})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  legendRectSize+22;})
-                    //.style("font-size", "16px")              
+                    .style("font-size", "16px")              
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
