@@ -140,14 +140,14 @@
         }
 	function imprimeLegenda(arquivo, divsvg)
         {
-	     var comp = document.getElementById('corpo3').style.width;
+	     var comp = document.getElementById('corpo3').offsetWidth;
              var legendRectSize = 18;                              
              
              var legendSpacing = 4; 
              
              var color = d3.scale.ordinal(d3.schemeCategory20b);
 		
-             console.log(legendRectSize);
+             console.log(comp);
  
              
              var margin = {top: 0, right: 10, bottom: 30, left: 32},
