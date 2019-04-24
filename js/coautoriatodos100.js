@@ -174,7 +174,7 @@ series8.fill = "#D1B7A9";
 series8.stroke = series8.fill;
 series8.cursorHoverEnabled = false;
 
-chart.scrollbarX = new am4core.Scrollbar();
+//chart.scrollbarX = new am4core.Scrollbar();
 
 chart.cursor = new am4charts.XYCursor();
 chart.cursor.behavior = "panX";
