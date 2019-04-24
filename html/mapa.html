@@ -91,9 +91,19 @@
     </main><!-- /.container -->
 
   <div id="corpo">
+        <div style="display: flex;justify-content: flex-start;">
+<!--Select para selecionar qual gráfico-->
+          <div>
+            <select id="idioma" onchange="atualiza_div(get_idioma());">
+              <option value="1">Português</option>
+	      <option value="2">Inglês</option>
+	    </select>
+	  </div>
+        </div>
         </br></br>
 	  <div id="corpo1" style="display: flex;justify-content: space-between;">
 	  </div>
+
 	  <div id="corpo2" style="display: flex;justify-content: space-between;">
 	  </div>
   </div>
@@ -108,119 +118,129 @@
 
 
     <script>
+  
+      function atualiza_div(idioma)
+      {
+	    d3.select("svg").remove(); 
 
-    var legendRectSize = 18;                              
-             
-    var legendSpacing = 4; 
-             
-    var color = d3.scale.ordinal(d3.schemeCategory20b);
-		
-    var margin = {top: 20, right: 10, bottom: 30, left: 32},
-	  width = document.getElementById("corpo1").offsetWidth - (margin.left) - (margin.right),
-	  height = document.getElementById("corpo1").offsetHeight - (margin.top) - (margin.bottom);
-	     
-    var comp = (width - (legendRectSize*4))/4;
+	    var legendRectSize = 18;                              
+		     
+	    var legendSpacing = 4; 
+		     
+	    var color = d3.scale.ordinal(d3.schemeCategory20b);
+			
+	    var margin = {top: 20, right: 10, bottom: 30, left: 32},
+		  width = document.getElementById("corpo1").offsetWidth - (margin.left) - (margin.right),
+		  height = document.getElementById("corpo1").offsetHeight - (margin.top) - (margin.bottom);
+		     
+	    var comp = (width - (legendRectSize*4))/4;
 
 
-    var svg = d3.select("div#corpo1").append("svg")
-                .attr("width", width)
-                .attr("height", height);
+	    var svg = d3.select("div#corpo1").append("svg")
+		        .attr("width", width)
+		        .attr("height", height);
 
-   var projection = d3.geo.mercator()
-          .center([-55,-10])
-          .scale(900);
+	   var projection = d3.geo.mercator()
+		  .center([-55,-10])
+		  .scale(900);
 
-   var path = d3.geo.path()
-        .projection(projection);
+	   var path = d3.geo.path()
+		.projection(projection);
 
-   queue()
-      .defer(d3.json, "../files/br-states.json")
-      .await(ready);
+	   queue()
+	      .defer(d3.json, "../files/br-states.json")
+	      .await(ready);
 
-   function ready (error, br_states){
-     if(error) return console.error(error);
+	   function ready (error, br_states){
+	     if(error) return console.error(error);
 
-   var states = topojson.feature(br_states, br_states.objects.states);
+	   var states = topojson.feature(br_states, br_states.objects.states);
 
-   svg.append("g")
-        .attr("class", "states")
-      .selectAll("path")
-        .data(states.features)
-      .enter().append("path")
-        .style("fill", function(d){if(Object.is(d.properties.region, "SUL")) return "#FF7F00"; else if(Object.is(d.properties.region, "SUDESTE")) return "#984EA3"; else if(Object.is(d.properties.region, "NORTE")) return "#4DAF4A"; else if(Object.is(d.properties.region, "NORDESTE")) return "#377EB8"; else return "#E41A1C";})
-      .attr("d", path)
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	   svg.append("g")
+		.attr("class", "states")
+	      .selectAll("path")
+		.data(states.features)
+	      .enter().append("path")
+		.style("fill", function(d){if(Object.is(d.properties.region, "SUL")) return "#FF7F00"; else if(Object.is(d.properties.region, "SUDESTE")) return "#984EA3"; else if(Object.is(d.properties.region, "NORTE")) return "#4DAF4A"; else if(Object.is(d.properties.region, "NORDESTE")) return "#377EB8"; else return "#E41A1C";})
+	      .attr("d", path)
+	      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-                   d3.csv("../files/estatisticaregion.csv", function(dataset) {  
+		           d3.csv("../files/estatisticaregion"+idioma+".csv", function(dataset) {  
 
-//Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
-		 var legend = svg.selectAll(".legend")                     
-		    .data(dataset)                                   
-		    .enter()                                                
-		    .append('g')                                            
-		    .attr('class', 'legend')    ;                            
-		    //.attr('transform', function(d, i) {                     
-		       //var height = legendRectSize + legendSpacing;          
-		       //var offset =  height * color.domain().length / 2;     
-		       //var horz = legendRectSize;                       
-		       //var vert = i * height - offset;                       
-		       //return 'translate(' + horz + ',' + vert + ')';        
-		       //});
+	//Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
+			 var legend = svg.selectAll(".legend")                     
+			    .data(dataset)                                   
+			    .enter()                                                
+			    .append('g')                                            
+			    .attr('class', 'legend')    ;                            
+			    //.attr('transform', function(d, i) {                     
+			       //var height = legendRectSize + legendSpacing;          
+			       //var offset =  height * color.domain().length / 2;     
+			       //var horz = legendRectSize;                       
+			       //var vert = i * height - offset;                       
+			       //return 'translate(' + horz + ',' + vert + ')';        
+			       //});
 
-                 legend.append('rect')                                      // NEW
-                    .attr("x", function(d, i, k){return margin.right+250;})
-		    .attr("y", function(d, i, k){return (i * 35)+420;})
-                    .attr('width', 30)                          // NEW
-                    .attr('height', 30)                         // NEW
-                    .style('fill', function(d) {return d.color})            // NEW
-                    .style('stroke', color);                                // NEW                                                     
-//Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){return margin.right+250+34;})              
-		    .attr("y", function(d, i, k){return (i * 35)+442;})
-                    .style("font-size", "16px")              
-		    .text(function(d) {return d.region;});
+		         legend.append('rect')                                      // NEW
+		            .attr("x", function(d, i, k){return margin.right+250;})
+			    .attr("y", function(d, i, k){return (i * 35)+420;})
+		            .attr('width', 30)                          // NEW
+		            .attr('height', 30)                         // NEW
+		            .style('fill', function(d) {return d.color})            // NEW
+		            .style('stroke', color);                                // NEW                                                     
+	//Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){return margin.right+250+34;})              
+			    .attr("y", function(d, i, k){return (i * 35)+442;})
+		            .style("font-size", "16px")              
+			    .text(function(d) {return d.region;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
-		    .attr("y", function(d, i, k){if(i==0){return 320;} else if(i==1){return 210;} else if(i==2){return 150;} else if(i==3){return 420;} else return 550;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.area;});
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+			    .attr("y", function(d, i, k){if(i==0){return 320;} else if(i==1){return 210;} else if(i==2){return 150;} else if(i==3){return 420;} else return 550;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.area;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
-		    .attr("y", function(d, i, k){if(i==0){return 335;} else if(i==1){return 225;} else if(i==2){return 165;} else if(i==3){return 435;} else return 565;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.populacao;});
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+			    .attr("y", function(d, i, k){if(i==0){return 335;} else if(i==1){return 225;} else if(i==2){return 165;} else if(i==3){return 435;} else return 565;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.populacao;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
-		    .attr("y", function(d, i, k){if(i==0){return 350;} else if(i==1){return 240;} else if(i==2){return 180;} else if(i==3){return 450;} else return 580;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.pib;});
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+			    .attr("y", function(d, i, k){if(i==0){return 350;} else if(i==1){return 240;} else if(i==2){return 180;} else if(i==3){return 450;} else return 580;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.pib;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
-		    .attr("y", function(d, i, k){if(i==0){return 365;} else if(i==1){return 255;} else if(i==2){return 195;} else if(i==3){return 465;} else return 595;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.ppg;});
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+			    .attr("y", function(d, i, k){if(i==0){return 365;} else if(i==1){return 255;} else if(i==2){return 195;} else if(i==3){return 465;} else return 595;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.ppg;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
-		    .attr("y", function(d, i, k){if(i==0){return 380;} else if(i==1){return 270;} else if(i==2){return 210;} else if(i==3){return 480;} else return 610;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.pesquisador;});
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+			    .attr("y", function(d, i, k){if(i==0){return 380;} else if(i==1){return 270;} else if(i==2){return 210;} else if(i==3){return 480;} else return 610;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.pesquisador;});
 
-		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){return margin.right+250;})              
-		    .attr("y", function(d, i, k){return (i*15)+630;})
-                    .style("font-size", "14px")              
-		    .text(function(d) {return d.legenda;});
-                                      
-	     }); 
-    };
-
-    </script>
+			 legend.append('text')                                     
+			    .attr('x', function(d, i, k){return margin.right+250;})              
+			    .attr("y", function(d, i, k){return (i*15)+630;})
+		            .style("font-size", "14px")              
+			    .text(function(d) {return d.legenda;});
+		                              
+		     }); 
+	    };
+        }
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+   </script>
+   <script> atualiza_div(1);</script>
 
   </body>
 </html>

@@ -9,12 +9,14 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Colaborações por Região Geográfica</title>
+    <script src="../js/d3.v3.min.js"></script>
+    <script src="../js/d3.tip.v0.6.3.js"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="../css/style100.css" />
+    <link rel="stylesheet" href="../css/regiontodos100.css" />
   </head>
   <body>
 
@@ -75,11 +77,24 @@
       </div>
 
     </main><!-- /.container -->
-    <div id="chartdiv"><script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script src="../js/regiontodos100.js"></script>
-    </div>
+
+      <div id="corpo">
+        <div style="display: flex;justify-content: flex-start;">
+<!--Select para selecionar qual gráfico-->
+          <div>
+            <select id="idioma" onchange="atualiza_div(get_idioma());">
+              <option value="1">Português</option>
+	      <option value="2">Inglês</option>
+	    </select>
+	  </div>
+        </div>
+        </br></br>
+        <div id="chartdiv"><script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        </div>
+
+      </div>
 
 
     
@@ -90,5 +105,21 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function atualiza_div(idioma)
+	{
+	     d3.select("svg").remove();
+             var imported = document.createElement('script');
+             imported.src = "../js/regiontodos100"+idioma+".js";
+             document.head.appendChild(imported); 
+             
+        }
+        function get_idioma()
+        {
+          var idiomas = document.getElementById('idioma')
+          return idiomas.options[idioma.selectedIndex].value
+        }
+   </script>
+   <script> atualiza_div(1);</script>
   </body>
 </html>
