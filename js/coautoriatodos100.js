@@ -4,7 +4,6 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 chart.data = [{
     "category": "Agrárias",
-    "value1": 0,
     "value2": 110680,
     "value3": 26983,
     "value4": 40035,
@@ -15,7 +14,6 @@ chart.data = [{
 }, {
     "category": "Biológicas",
     "value1": 110680,
-    "value2": 0,
     "value3": 149228,
     "value4": 71224,
     "value5": 10312,
@@ -26,7 +24,6 @@ chart.data = [{
     "category": "Saúde",
     "value1": 26983,
     "value2": 149288,
-    "value3": 0,
     "value4": 53047,
     "value5": 31448,
     "value6": 9648,
@@ -37,7 +34,6 @@ chart.data = [{
     "value1": 40035,
     "value2": 71224,
     "value3": 53047,
-    "value4": 0,
     "value5": 13469,
     "value6": 5455,
     "value7": 117625,
@@ -48,7 +44,6 @@ chart.data = [{
     "value2": 10312,
     "value3": 31448,
     "value4": 13469,
-    "value5": 0,
     "value6": 16451,
     "value7": 4608,
     "value8": 10638
@@ -59,7 +54,6 @@ chart.data = [{
     "value3": 9684,
     "value4": 5455,
     "value5": 16451,
-    "value6": 0,
     "value7": 7782,
     "value8": 2866
 }, {
@@ -70,7 +64,6 @@ chart.data = [{
     "value4": 117625,
     "value5": 4608,
     "value6": 7782,
-    "value7": 0,
     "value8": 564
 }, {
     "category": "Linguistíca",
@@ -80,8 +73,7 @@ chart.data = [{
     "value4": 949,
     "value5": 10638,
     "value6": 2866,
-    "value7": 564,
-    "value8": 0
+    "value7": 564
 }]
 
 chart.colors.step = 2;
