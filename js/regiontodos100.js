@@ -108,7 +108,7 @@ series5.fill = "#FF7F00";
 series5.stroke = series5.fill;
 series5.cursorHoverEnabled = false;
 
-chart.scrollbarX = new am4core.Scrollbar();
+//chart.scrollbarX = new am4core.Scrollbar();
 
 chart.cursor = new am4charts.XYCursor();
 chart.cursor.behavior = "panX";
