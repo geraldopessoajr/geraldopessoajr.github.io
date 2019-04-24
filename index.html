@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>On Interdisciplinary Collaborations in Scentific Coauthorship Networks</title>
+    <title>Colaborações Interdisciplinares em Redes de Coautoria Científicas</title>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.tip.v0.6.3.js"></script>
 
@@ -94,7 +94,6 @@
       </div>
 
       <div id="corpo2">
-        <center><img width="100%" src="./img/interxglobal.jpg" alt="As Redes Brasileiras de Coautoria Global e Interdisciplinar"></center> </br>
       </div>
 
       <div id="corpo3">
@@ -118,10 +117,12 @@
              d3.select("svg").remove();
              if(idioma == 2)
              {
+		document.getElementById("corpo2").innerHTML = "<center><img width=\"100%\" src=\"./img/interxglobal2.jpg\" alt=\"The Brazilian Global and Interdisciplinary Coauthorship Networks\"></center> </br>";
                 imprimeLegenda("files/coautoria"+idioma+"legenda.csv", 'corpo3');
              }
              else if(idioma == 1)
              {
+	       document.getElementById("corpo2").innerHTML = "<center><img width=\"100%\" src=\"./img/interxglobal1.jpg\" alt=\"As Redes Brasileiras de Coautoria Global e Interdisciplinar\"></center> </br>";
                imprimeLegenda("files/coautoria"+idioma+"legenda.csv", 'corpo3');
              }      
 
