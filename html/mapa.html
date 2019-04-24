@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Estatistícas por Região</title>
+    <style>
+
+    .states{
+      fill:gray;
+      stroke: white;
+      stroke-linejoin: round;
+    }
+
+    </style>
+    <script src="../js/d3.v3.min.js"></script>
+    <script src="../js/d3.tip.v0.6.3.js"></script>
+    <script src="../js/queue.v1.min.js"></script>
+    <script src="../js/topojson.v1.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="../css/mapa.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../index.html">O Trabalho</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Grande Áreas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./coautoria.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./coautoriatodos.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./coautoriatodos100.html">Grande Áreas 100%</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Região Geográfica</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./mapa.html">Estatísticas por Região</a>
+              <a class="dropdown-item" href="./region.html">por Região</a>
+              <a class="dropdown-item" href="./regiontodos.html">Região</a>
+              <a class="dropdown-item" href="./regiontodos100.html">Região 100%</a>
+              <a class="dropdown-item" href="./regiongreatarea.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./regionpergreatarea.html">Grande Áreas (por Região)</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Idade Acadêmica do Pesquisador</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./inter.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./intertodos.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./intertodos100.html">Grande Áreas 100%</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Análise Temporal</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./disttempo.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./disttempotodos1.html">Grande Áreas [< 2k]</a>
+              <a class="dropdown-item" href="./disttempotodos2.html">Grande Áreas [2k, 4k]</a>
+              <a class="dropdown-item" href="./disttempotodos3.html">Grande Áreas [> 4k]</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Estatísticas por Região</h1>
+        <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
+      </div>
+
+    </main><!-- /.container -->
+
+  <div id="corpo">
+        </br></br>
+	  <div id="corpo1" style="display: flex;justify-content: space-between;">
+	  </div>
+	  <div id="corpo2" style="display: flex;justify-content: space-between;">
+	  </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script>
+
+    var legendRectSize = 18;                              
+             
+    var legendSpacing = 4; 
+             
+    var color = d3.scale.ordinal(d3.schemeCategory20b);
+		
+    var margin = {top: 20, right: 10, bottom: 30, left: 32},
+	  width = document.getElementById("corpo1").offsetWidth - (margin.left) - (margin.right),
+	  height = document.getElementById("corpo1").offsetHeight - (margin.top) - (margin.bottom);
+	     
+    var comp = (width - (legendRectSize*4))/4;
+
+
+    var svg = d3.select("div#corpo1").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+   var projection = d3.geo.mercator()
+          .center([-55,-10])
+          .scale(900);
+
+   var path = d3.geo.path()
+        .projection(projection);
+
+   queue()
+      .defer(d3.json, "../files/br-states.json")
+      .await(ready);
+
+   function ready (error, br_states){
+     if(error) return console.error(error);
+
+   var states = topojson.feature(br_states, br_states.objects.states);
+
+   svg.append("g")
+        .attr("class", "states")
+      .selectAll("path")
+        .data(states.features)
+      .enter().append("path")
+        .style("fill", function(d){if(Object.is(d.properties.region, "SUL")) return "#FF7F00"; else if(Object.is(d.properties.region, "SUDESTE")) return "#984EA3"; else if(Object.is(d.properties.region, "NORTE")) return "#4DAF4A"; else if(Object.is(d.properties.region, "NORDESTE")) return "#377EB8"; else return "#E41A1C";})
+      .attr("d", path)
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                   d3.csv("../files/estatisticaregion.csv", function(dataset) {  
+
+//Chama a legenda na div corpo 2. E define o tamanho do quadrinho dessa legenda 
+		 var legend = svg.selectAll(".legend")                     
+		    .data(dataset)                                   
+		    .enter()                                                
+		    .append('g')                                            
+		    .attr('class', 'legend')    ;                            
+		    //.attr('transform', function(d, i) {                     
+		       //var height = legendRectSize + legendSpacing;          
+		       //var offset =  height * color.domain().length / 2;     
+		       //var horz = legendRectSize;                       
+		       //var vert = i * height - offset;                       
+		       //return 'translate(' + horz + ',' + vert + ')';        
+		       //});
+
+                 legend.append('rect')                                      // NEW
+                    .attr("x", function(d, i, k){return margin.right+250;})
+		    .attr("y", function(d, i, k){return (i * 35)+420;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
+                    .style('fill', function(d) {return d.color})            // NEW
+                    .style('stroke', color);                                // NEW                                                     
+//Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){return margin.right+250+34;})              
+		    .attr("y", function(d, i, k){return (i * 35)+442;})
+                    .style("font-size", "16px")              
+		    .text(function(d) {return d.region;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+		    .attr("y", function(d, i, k){if(i==0){return 320;} else if(i==1){return 210;} else if(i==2){return 150;} else if(i==3){return 420;} else return 550;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.area;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+		    .attr("y", function(d, i, k){if(i==0){return 335;} else if(i==1){return 225;} else if(i==2){return 165;} else if(i==3){return 435;} else return 565;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.populacao;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+		    .attr("y", function(d, i, k){if(i==0){return 350;} else if(i==1){return 240;} else if(i==2){return 180;} else if(i==3){return 450;} else return 580;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.pib;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+		    .attr("y", function(d, i, k){if(i==0){return 365;} else if(i==1){return 255;} else if(i==2){return 195;} else if(i==3){return 465;} else return 595;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.ppg;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){if(i==0){return 470;} else if(i==1){return 670;} else if(i==2){return 330;} else if(i==3){return 600;} else return 540;})              
+		    .attr("y", function(d, i, k){if(i==0){return 380;} else if(i==1){return 270;} else if(i==2){return 210;} else if(i==3){return 480;} else return 610;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.pesquisador;});
+
+		 legend.append('text')                                     
+		    .attr('x', function(d, i, k){return margin.right+250;})              
+		    .attr("y", function(d, i, k){return (i*15)+630;})
+                    .style("font-size", "14px")              
+		    .text(function(d) {return d.legenda;});
+                                      
+	     }); 
+    };
+
+    </script>
+
+  </body>
+</html>
