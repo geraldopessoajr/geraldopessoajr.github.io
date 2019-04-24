@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Researchers by Academic Age</title>
+    <title>Pesquisadores por Idade Acadêmica</title>
     <script src="../js/d3.v3.min.js"></script>
     <script src="../js/d3.tip.v0.6.3.js"></script>
     <!-- Bootstrap core CSS -->
@@ -22,7 +22,7 @@
   <body>
    
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="../index.html">Home</a>
+      <a class="navbar-brand" href="../index.html">O Trabalho</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,39 +30,39 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Major Area</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="./coautoria.html">per Great Area</a>
-              <a class="dropdown-item" href="./coautoriaTodos.html">All Great Areas</a>
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Grande Áreas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">		
+              <a class="dropdown-item" href="./coautoria.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./coautoriatodos.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./coautoriatodos100.html">Grande Áreas 100%</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collaborations per Geographical Region</a>
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Região Geográfica</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="./region.html">per Region</a>
-              <a class="dropdown-item" href="./regionTodos.html">All Regions</a>
-              <a class="dropdown-item" href="./regionGreatArea.html">Great Areas</a>
-              <a class="dropdown-item" href="./regionperGreatArea.html">Great Areas (per Region)</a>
+              <a class="dropdown-item" href="./region.html">por Região</a>
+              <a class="dropdown-item" href="./regiontodos.html">Região</a>
+              <a class="dropdown-item" href="./regiontodos100.html">Região 100%</a>
+              <a class="dropdown-item" href="./regiongreatarea.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./regionpergreatarea.html">Grande Áreas (por Região)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Researchers by Academic Age</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <!---<a class="dropdown-item" href="./html/idade.html">per Academic Age</a>
-              <a class="dropdown-item" href="./html/idadeTodos.html">All Academic Ages</a>
-              <a class="dropdown-item" href="./html/idadeArea.html">per Great Area</a>
-              <a class="dropdown-item" href="./html/idadeAreaTodos.html">All Great Areas</a>--->
-              <a class="dropdown-item" href="./inter.html">per Great Area</a>
-              <a class="dropdown-item" href="./interTodos.html">All Great Areas</a>
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colaborações por Idade Acadêmica do Pesquisador</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">    
+              <a class="dropdown-item" href="./atInter.html">por Ano</a>
+              <a class="dropdown-item" href="./inter.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./intertodos.html">Grande Áreas</a>
+              <a class="dropdown-item" href="./intertodos100.html">Grande Áreas 100%</a>
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Temporal analysis</a>
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Análise Temporal</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="./distTempo.html">per Great Area</a>
-              <a class="dropdown-item" href="./distTempoTodos1.html">All Great Areas [< 2k]</a>
-              <a class="dropdown-item" href="./distTempoTodos2.html">All Great Areas [2k, 4k]</a>
-              <a class="dropdown-item" href="./distTempoTodos3.html">All Great Areas [> 4k]</a>
+              <a class="dropdown-item" href="./disttempo.html">por Grande Áreas</a>
+              <a class="dropdown-item" href="./disttempotodos1.html">Grande Áreas [< 2k]</a>
+              <a class="dropdown-item" href="./disttempotodos2.html">Grande Áreas [2k, 4k]</a>
+              <a class="dropdown-item" href="./disttempotodos3.html">Grande Áreas [> 4k]</a>
             </div>
           </li>
         </ul>
@@ -72,7 +72,7 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>Researchers by Academic Age</h1>
+        <h1>Pesquisadores por Idade Acadêmica</h1>
         <!-- <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p> -->
       </div>
 
