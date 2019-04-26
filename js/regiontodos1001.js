@@ -76,10 +76,11 @@ series1.cursorHoverEnabled = false;
 
 var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
 bullet1.label.text = "{valueY.totalPercent.formatNumber('#.0')}%";
-bullet1.fontSize = 12;
+bullet1.fontSize = 14;
 bullet1.locationY = 0.5;
 bullet1.hoverOnFocus = true;
 bullet1.label.dx = 10;
+bullet1.label.truncate = false;
 bullet1.label.fill = am4core.color("#ffffff");
 bullet1.interactionsEnabled = false;
 
