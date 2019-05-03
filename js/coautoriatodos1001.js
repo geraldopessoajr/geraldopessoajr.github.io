@@ -30,7 +30,7 @@ chart.data = [{
     "value7": 17665,
     "value8": 3750
 }, {
-    "category": "Ciências Exatas\n  -  e da Terra",
+    "category": "Ciências Exatas\n\te da Terra",
     "value1": 40035,
     "value2": 71224,
     "value3": 53047,
