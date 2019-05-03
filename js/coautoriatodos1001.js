@@ -119,7 +119,7 @@ bullet1.label.fill = am4core.color("#ffffff");
 bullet1.interactionsEnabled = false;
 
 var series3 = chart.series.push(series1.clone());
-series3.name = "Ciências da Saúde";
+series3.name = "Ciências da Saúde ________";
 series3.dataFields.valueY = "value3";
 series3.fill = "#DD87FB";
 series3.stroke = series3.fill;
