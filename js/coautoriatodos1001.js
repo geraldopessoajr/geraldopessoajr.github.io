@@ -12,7 +12,7 @@ chart.data = [{
     "value7": 20175,
     "value8": 315
 }, {
-    "category": "Ciências\nBiológicas",
+    "category": "  Ciências\nBiológicas",
     "value1": 110680,
     "value3": 149228,
     "value4": 71224,
@@ -21,7 +21,7 @@ chart.data = [{
     "value7": 15419,
     "value8": 653
 }, {
-    "category": "Ciências\nda Saúde",
+    "category": " Ciências\nda Saúde",
     "value1": 26983,
     "value2": 149288,
     "value4": 53047,
@@ -30,7 +30,7 @@ chart.data = [{
     "value7": 17665,
     "value8": 3750
 }, {
-    "category": "Ciências Exatas\ne da Terra",
+    "category": "Ciências Exatas\n    e da Terra",
     "value1": 40035,
     "value2": 71224,
     "value3": 53047,
@@ -39,7 +39,7 @@ chart.data = [{
     "value7": 117625,
     "value8": 949
 }, {
-    "category": "Ciências\nHumanas",
+    "category": " Ciências\nHumanas",
     "value1": 4902,
     "value2": 10312,
     "value3": 31448,
@@ -48,7 +48,7 @@ chart.data = [{
     "value7": 4608,
     "value8": 10638
 }, {
-    "category": "Ciências Sociais\ne Aplicadas",
+    "category": "Ciências Sociais\n    e Aplicadas",
     "value1": 5244,
     "value2": 3327,
     "value3": 9684,
@@ -66,7 +66,7 @@ chart.data = [{
     "value6": 7782,
     "value8": 564
 }, {
-    "category": "Linguistíca,\nLetras e Artes",
+    "category": "  Linguistíca,\nLetras e Artes",
     "value1": 315,
     "value2": 653,
     "value3": 3750,
