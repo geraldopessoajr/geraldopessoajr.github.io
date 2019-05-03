@@ -119,7 +119,7 @@ bullet1.label.fill = am4core.color("#ffffff");
 bullet1.interactionsEnabled = false;
 
 var series3 = chart.series.push(series1.clone());
-series3.name = "Ciências da Saúde\t-";
+series3.name = "Ciências da Saúde";
 series3.dataFields.valueY = "value3";
 series3.fill = "#DD87FB";
 series3.stroke = series3.fill;
@@ -154,7 +154,8 @@ series6.stroke = series6.fill;
 series6.cursorHoverEnabled = false;
 
 var series5 = chart.series.push(series1.clone());
-series5.name = "Ciências Agrárias\t";
+series5.name = "Ciências Agrárias";
+series5.text = "Ciências Agrárias\t";
 series5.dataFields.valueY = "value1";
 series5.fill = "#F65582";
 series5.stroke = series5.fill;
