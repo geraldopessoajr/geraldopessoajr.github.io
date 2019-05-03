@@ -30,7 +30,7 @@ chart.data = [{
     "value7": 17665,
     "value8": 3750
 }, {
-    "category": "Ciências\nExatas e da Terra",
+    "category": "Ciências Exatas\ne da Terra",
     "value1": 40035,
     "value2": 71224,
     "value3": 53047,
@@ -48,7 +48,7 @@ chart.data = [{
     "value7": 4608,
     "value8": 10638
 }, {
-    "category": "Ciências\nSociais e Aplicadas",
+    "category": "Ciências Sociais\ne Aplicadas",
     "value1": 5244,
     "value2": 3327,
     "value3": 9684,
