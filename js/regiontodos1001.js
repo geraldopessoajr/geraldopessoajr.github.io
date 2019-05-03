@@ -2,21 +2,7 @@ am4core.useTheme(am4themes_animated);
 
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
-chart.data = [{
-    "category": "Centro-Oeste",
-    "value1": 9730,
-    "value2": 11316,
-    "value3": 873,
-    "value4": 35225,
-    "value5": 14763
-}, {
-    "category": "Nordeste",
-    "value1": 11316,
-    "value2": 39767,
-    "value3": 2025,
-    "value4": 84163,
-    "value5": 36632
-}, {
+chart.data = [ {
     "category": "Norte",
     "value1": 873,
     "value2": 2025,
@@ -24,6 +10,20 @@ chart.data = [{
     "value4": 5622,
     "value5": 2400
 }, {
+    "category": "Nordeste",
+    "value1": 11316,
+    "value2": 39767,
+    "value3": 2025,
+    "value4": 84163,
+    "value5": 36632
+},  {
+    "category": "Centro-Oeste",
+    "value1": 9730,
+    "value2": 11316,
+    "value3": 873,
+    "value4": 35225,
+    "value5": 14763
+},{
     "category": "Sudeste",
     "value1": 35225,
     "value2": 84163,
@@ -63,15 +63,15 @@ valueAxis.renderer.minWidth = 35;
 var series1 = chart.series.push(new am4charts.ColumnSeries());
 series1.columns.template.tooltipText = "{name}: {valueY.totalPercent.formatNumber('#.0')}%";
 series1.columns.template.column.strokeOpacity = 1;
-series1.name = "Centro-Oeste";
+series1.name = "Norte";
 series1.dataFields.categoryX = "category";
-series1.dataFields.valueY = "value1";
+series1.dataFields.valueY = "value3";
 series1.dataFields.valueYShow = "totalPercent";
 series1.dataItems.template.locations.categoryX = 0.5;
 series1.stacked = true;
 series1.tooltip.pointerOrientation = "vertical";
 series1.tooltip.dy = - 20;
-series1.fill = "#E41A1C";
+series1.fill = "#4DAF4A";
 series1.cursorHoverEnabled = false;
 
 var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
@@ -92,9 +92,9 @@ series2.stroke = series2.fill;
 series2.cursorHoverEnabled = false;
 
 var series3 = chart.series.push(series1.clone());
-series3.name = "Norte";
-series3.dataFields.valueY = "value3";
-series3.fill = "#4DAF4A";
+series3.name = "Centro-Oeste";
+series3.dataFields.valueY = "value1";
+series3.fill = "#E41A1C";
 series3.stroke = series3.fill;
 series3.cursorHoverEnabled = false;
 
