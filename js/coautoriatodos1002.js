@@ -2,60 +2,15 @@ am4core.useTheme(am4themes_animated);
 
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
-chart.data = [ {
-    "category": "  Linguistics\nLetters, Arts",
-    "value1": 315,
-    "value2": 2866,
-    "value3": 653,
-    "value4": 564,
-    "value5": 949,
-    "value6": 3750,
-    "value7": 10638
-}, {
-    "category": "Humanities",
-    "value1": 4902,
-    "value2": 16451,
-    "value3": 10312,
-    "value4": 4608,
-    "value5": 13469,
-    "value6": 31448,
-    "value8": 10638
-}, {
-    "category": "  Health\nSciences",
-    "value1": 26983,
-    "value2": 9648,
-    "value3": 149288,
-    "value4": 17665,
-    "value5": 53047,
-    "value7": 31448,
-    "value8": 3750
-}, {
-    "category": "Exact & Earth\nSciences",
-    "value1": 40035,
-    "value2": 5455,
-    "value3": 71224,
-    "value4": 117625,
-    "value6": 53047,
-    "value7": 13469,
-    "value8": 949
-}, {
-    "category": "Engineering",
-    "value1": 20175,
-    "value2": 7782,
-    "value3": 15419,
-    "value5": 117625,
-    "value6": 17665,
-    "value7": 4608,
-    "value8": 564
-}, {
-    "category": "Biological\nSciences",
-    "value1": 110680,
-    "value2": 3327,
-    "value4": 15419,
-    "value5": 71224,
-    "value6": 149228,
-    "value7": 10312,
-    "value8": 653
+chart.data = [{
+    "category": "Agrarian\nSciences",
+    "value2": 5244,
+    "value3": 110680,
+    "value4": 20175,
+    "value5": 40035,
+    "value6": 26983,
+    "value7": 4902,
+    "value8": 315
 }, {
     "category": "Applied & Social\nSciences",
     "value1": 5244,
@@ -66,15 +21,60 @@ chart.data = [ {
     "value7": 16451,
     "value8": 2866
 }, {
-    "category": "Agrarian\nSciences",
-    "value2": 5244,
-    "value3": 110680,
-    "value4": 20175,
-    "value5": 40035,
-    "value6": 26983,
-    "value7": 4902,
-    "value8": 315
-}, ]
+    "category": "Biological\nSciences",
+    "value1": 110680,
+    "value2": 3327,
+    "value4": 15419,
+    "value5": 71224,
+    "value6": 149228,
+    "value7": 10312,
+    "value8": 653
+}, {
+    "category": "Engineering",
+    "value1": 20175,
+    "value2": 7782,
+    "value3": 15419,
+    "value5": 117625,
+    "value6": 17665,
+    "value7": 4608,
+    "value8": 564
+}, {
+    "category": "Exact & Earth\nSciences",
+    "value1": 40035,
+    "value2": 5455,
+    "value3": 71224,
+    "value4": 117625,
+    "value6": 53047,
+    "value7": 13469,
+    "value8": 949
+}, {
+    "category": "  Health\nSciences",
+    "value1": 26983,
+    "value2": 9648,
+    "value3": 149288,
+    "value4": 17665,
+    "value5": 53047,
+    "value7": 31448,
+    "value8": 3750
+}, {
+    "category": "Humanities",
+    "value1": 4902,
+    "value2": 16451,
+    "value3": 10312,
+    "value4": 4608,
+    "value5": 13469,
+    "value6": 31448,
+    "value8": 10638
+}, {
+    "category": "  Linguistics\nLetters, Arts",
+    "value1": 315,
+    "value2": 2866,
+    "value3": 653,
+    "value4": 564,
+    "value5": 949,
+    "value6": 3750,
+    "value7": 10638
+}]
 
 chart.colors.step = 2;
 chart.padding(30, 30, 10, 0);
