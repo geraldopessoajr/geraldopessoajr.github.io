@@ -12,7 +12,7 @@ chart.data = [{
     "value7": 20175,
     "value8": 315
 }, {
-    "category": "  Ciências\nBiológicas",
+    "category": "<j>Ciências\nBiológicas</j>",
     "value1": 110680,
     "value3": 149228,
     "value4": 71224,
