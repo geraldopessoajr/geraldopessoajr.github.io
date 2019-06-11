@@ -4,80 +4,80 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 chart.data = [{
     "category": "Agrarian\nSciences",
-    "value2": 5244,
-    "value3": 110680,
-    "value4": 20175,
-    "value5": 40035,
-    "value6": 26983,
-    "value7": 4902,
-    "value8": 315
+    "value2": 2.4,
+    "value3": 53.1,
+    "value4": 9.7,
+    "value5": 19.2,
+    "value6": 12.9,
+    "value7": 2.4,
+    "value8": 0.2
 }, {
     "category": "Applied & Social\nSciences",
-    "value1": 5244,
-    "value3": 3327,
-    "value4": 7782,
-    "value5": 5455,
-    "value6": 9684,
-    "value7": 16451,
-    "value8": 2866
+    "value1": 10.3,
+    "value3": 6.6,
+    "value4": 15.3,
+    "value5": 10.7,
+    "value6": 19.1,
+    "value7": 32.4,
+    "value8": 5.6
 }, {
     "category": "Biological\nSciences",
-    "value1": 110680,
-    "value2": 3327,
-    "value4": 15419,
-    "value5": 71224,
-    "value6": 149228,
-    "value7": 10312,
-    "value8": 653
+    "value1": 30.7,
+    "value2": 0.9,
+    "value4": 4.3,
+    "value5": 19.7,
+    "value6": 41.4,
+    "value7": 2.8,
+    "value8": 0.2
 }, {
     "category": "Engineering",
-    "value1": 20175,
-    "value2": 7782,
-    "value3": 15419,
-    "value5": 117625,
-    "value6": 17665,
-    "value7": 4608,
-    "value8": 564
+    "value1": 11.0,
+    "value2": 4.2,
+    "value3": 8.4,
+    "value5": 64.0,
+    "value6": 9.6,
+    "value7": 2.5,
+    "value8": 0.3
 }, {
     "category": "Exact & Earth\nSciences",
-    "value1": 40035,
-    "value2": 5455,
-    "value3": 71224,
-    "value4": 117625,
-    "value6": 53047,
-    "value7": 13469,
-    "value8": 949
+    "value1": 13.3,
+    "value2": 1.8,
+    "value3": 23.7,
+    "value4": 38.9,
+    "value6": 17.6,
+    "value7": 4.4,
+    "value8": 0.3
 }, {
     "category": "  Health\nSciences",
-    "value1": 26983,
-    "value2": 9648,
-    "value3": 149288,
-    "value4": 17665,
-    "value5": 53047,
-    "value7": 31448,
-    "value8": 3750
+    "value1": 9.2,
+    "value2": 3.3,
+    "value3": 51.1,
+    "value4": 6.1,
+    "value5": 18.2,
+    "value7": 10.8,
+    "value8": 1.3
 }, {
     "category": "Humanities",
-    "value1": 4902,
-    "value2": 16451,
-    "value3": 10312,
-    "value4": 4608,
-    "value5": 13469,
-    "value6": 31448,
-    "value8": 10638
+    "value1": 5.3,
+    "value2": 18.0,
+    "value3": 11.2,
+    "value4": 5.0,
+    "value5": 14.7,
+    "value6": 34.2,
+    "value8": 11.6
 }, {
     "category": "  Linguistics\nLetters, Arts",
-    "value1": 315,
-    "value2": 2866,
-    "value3": 653,
-    "value4": 564,
-    "value5": 949,
-    "value6": 3750,
-    "value7": 10638
+    "value1": 1.6,
+    "value2": 14.5,
+    "value3": 3.3,
+    "value4": 2.9,
+    "value5": 4.8,
+    "value6": 19.0,
+    "value7": 53.9
 }]
 
 chart.colors.step = 2;
-chart.padding(30, 30, 10, 0);
+chart.padding(30, 30, 10, 30);
 
 chart.legend = new am4charts.Legend();
 chart.legend.itemContainers.template.cursorOverStyle = am4core.MouseCursorStyle.pointer;
@@ -113,7 +113,7 @@ series1.cursorHoverEnabled = false;
 
 var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
 bullet1.label.text = "{valueY.totalPercent.formatNumber('#.0')}%";
-bullet1.fontSize = 12;
+bullet1.fontSize = 14;
 bullet1.locationY = 0.5;
 bullet1.label.truncate = false;
 bullet1.label.fill = am4core.color("#ffffff");

@@ -4,76 +4,76 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 chart.data = [{
     "category": "Ciências\nAgrárias",
-    "value2": 110680,
-    "value3": 26983,
-    "value4": 40035,
-    "value5": 4902,
-    "value6": 5244,
-    "value7": 20175,
-    "value8": 315
+    "value2": 53.1,
+    "value3": 12.9,
+    "value4": 19.2,
+    "value5": 2.4,
+    "value6": 2.4,
+    "value7": 9.7,
+    "value8": 0.2
 }, {
     "category": " Ciências\nBiológicas",
-    "value1": 110680,
-    "value3": 149228,
-    "value4": 71224,
-    "value5": 10312,
-    "value6": 3327,
-    "value7": 15419,
-    "value8": 653
+    "value1": 30.7,
+    "value3": 41.4,
+    "value4": 19.7,
+    "value5": 2.8,
+    "value6": 0.9,
+    "value7": 4.3,
+    "value8": 0.2
 }, {
     "category": " Ciências\nda Saúde",
-    "value1": 26983,
-    "value2": 149288,
-    "value4": 53047,
-    "value5": 31448,
-    "value6": 9648,
-    "value7": 17665,
-    "value8": 3750
+    "value1": 9.2,
+    "value2": 51.1,
+    "value4": 18.2,
+    "value5": 10.8,
+    "value6": 3.3,
+    "value7": 6.1,
+    "value8": 1.3
 }, {
     "category": "Ciências Exatas\n\te da Terra",
-    "value1": 40035,
-    "value2": 71224,
-    "value3": 53047,
-    "value5": 13469,
-    "value6": 5455,
-    "value7": 117625,
-    "value8": 949
+    "value1": 13.3,
+    "value2": 23.7,
+    "value3": 17.6,
+    "value5": 4.4,
+    "value6": 1.8,
+    "value7": 38.9,
+    "value8": 0.3
 }, {
     "category": " Ciências\nHumanas",
-    "value1": 4902,
-    "value2": 10312,
-    "value3": 31448,
-    "value4": 13469,
-    "value6": 16451,
-    "value7": 4608,
-    "value8": 10638
+    "value1": 5.3,
+    "value2": 11.2,
+    "value3": 34.2,
+    "value4": 14.7,
+    "value6": 18.0,
+    "value7": 5.0,
+    "value8": 11.6
 }, {
     "category": "Ciências Sociais\n    e Aplicadas",
-    "value1": 5244,
-    "value2": 3327,
-    "value3": 9684,
-    "value4": 5455,
-    "value5": 16451,
-    "value7": 7782,
-    "value8": 2866
+    "value1": 10.3,
+    "value2": 6.6,
+    "value3": 19.1,
+    "value4": 10.7,
+    "value5": 32.4,
+    "value7": 15.3,
+    "value8": 5.6
 }, {
     "category": "Engenharias",
-    "value1": 20175,
-    "value2": 15419,
-    "value3": 17665,
-    "value4": 117625,
-    "value5": 4608,
-    "value6": 7782,
-    "value8": 564
+    "value1": 11.0,
+    "value2": 8.4,
+    "value3": 9.6,
+    "value4": 64.0,
+    "value5": 2.5,
+    "value6": 4.2,
+    "value8": 0.3
 }, {
     "category": "  Linguistíca,\nLetras e Artes",
-    "value1": 315,
-    "value2": 653,
-    "value3": 3750,
-    "value4": 949,
-    "value5": 10638,
-    "value6": 2866,
-    "value7": 564
+    "value1": 1.6,
+    "value2": 3.3,
+    "value3": 19.0,
+    "value4": 4.8,
+    "value5": 53.9,
+    "value6": 14.5,
+    "value7": 2.9
 }]
 
 chart.colors.step = 2;
@@ -115,6 +115,7 @@ var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
 bullet1.label.text = "{valueY.totalPercent.formatNumber('#.0')}%";
 bullet1.fontSize = 14;
 bullet1.locationY = 0.5;
+bullet1.label.truncate = false;
 bullet1.label.fill = am4core.color("#ffffff");
 bullet1.interactionsEnabled = false;
 
