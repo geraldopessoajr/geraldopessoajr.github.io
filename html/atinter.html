@@ -218,20 +218,20 @@ function make_y_gridlines() {
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
                     .call(xAxis)		     
-		    .style("font-size", "16px");
+		    .style("font-size", "20px");
 
 
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
 		    .call(yAxis)     
-		    .style("font-size", "16px")
+		    .style("font-size", "20px")
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end") 
-		    .style("font-size", "16px") 
+		    .style("font-size", "26px") 
 		    .text(function(){if(idioma == 1){return "Percentual de Publicações Interdisciplinares";}else{return "Average of Interdisciplinary Publications"}});
 
 
