@@ -263,7 +263,8 @@ function make_y_gridlines() {
 		      .attr("x", function(d, i){return margin.right+70})
 		      .attr("y", function(d, i){return (i *  30)+25;})
 		      .attr("width", 30)
-		      .attr("height", 30)
+		      .attr("height", 30)		           
+		      .style("font-size", "16px")
 		      .style("fill", function(d) {
 			return d;
 		      })
