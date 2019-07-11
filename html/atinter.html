@@ -260,7 +260,7 @@ function make_y_gridlines() {
 		      .enter()
 		      .append("rect")
 		      .attr("x", function(d, i){return margin.right+70})
-		      .attr("y", function(d, i){return (i *  15)+25;})
+		      .attr("y", function(d, i){return (i *  30)+25;})
 		      .attr("width", 30)
 		      .attr("height", 30)
 		      .style("fill", function(d) {
@@ -272,7 +272,7 @@ function make_y_gridlines() {
 		      .enter()
 		    .append("text")
 		    .attr("x", function(d, i){return margin.right+95})
-		    .attr("y", function(d, i){return (i *  15+9)+25;})
+		    .attr("y", function(d, i){return (i *  30+9)+25;})
 		    .text(function(d){return d});
                                       
 	     });
