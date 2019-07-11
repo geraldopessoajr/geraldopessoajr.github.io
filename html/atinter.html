@@ -218,13 +218,14 @@ function make_y_gridlines() {
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
                     .call(xAxis)		     
-		    .style("font-size", "16px") ;
+		    .style("font-size", "16px");
 
 
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
-		    .call(yAxis)
+		    .call(yAxis)     
+		    .style("font-size", "16px")
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
@@ -271,7 +272,7 @@ function make_y_gridlines() {
 		      .data(dataset["series"])
 		      .enter()
 		    .append("text")
-		    .attr("x", function(d, i){return margin.right+95})
+		    .attr("x", function(d, i){return margin.right+105})
 		    .attr("y", function(d, i){return (i *  30+9)+25;})
 		    .text(function(d){return d});
                                       
