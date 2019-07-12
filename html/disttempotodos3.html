@@ -230,19 +230,22 @@ function make_y_gridlines() {
                   svg.append("g")
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
-                    .call(xAxis);
+                    .call(xAxis)		     
+		    .style("font-size", "14px") ;
 
 
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
 		    .call(yAxis)
+		    .style("font-size", "16px") 
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
-		    .style("text-anchor", "end")
-		    .text(function(){if(idioma == 1){return "Média de Publicações";}else{return "Average of Publications"}});
+		    .style("text-anchor", "end")		    
+		    .style("font-size", "20px") 
+		    .text(function(){if(idioma == 1){return "Taxa de Publicação Interdisciplinar";}else{return "Average of Publications"}});
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
 		  svg.append("text")
