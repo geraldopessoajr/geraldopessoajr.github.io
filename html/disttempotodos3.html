@@ -238,13 +238,13 @@ function make_y_gridlines() {
 	          svg.append("g")
 		    .attr("class", "y axis")
 		    .call(yAxis)
-		    .style("font-size", "16px") 
+		    .style("font-size", "20px") 
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end")		    
-		    .style("font-size", "20px") 
+		    .style("font-size", "12px") 
 		    .text(function(){if(idioma == 1){return "Taxa de Publicação Interdisciplinar";}else{return "Average of Publications"}});
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
