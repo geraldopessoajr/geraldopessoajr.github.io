@@ -122,12 +122,12 @@
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
-	     d3.select("svg").remove();
+	     d3.select("svg").remove 'corpo1-1');
+                  imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo2-1');();
              
              if(idioma == 2)
              {
-		  imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1');
-                  imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo2-1');
+		  imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv",
                   imprimeGrafico(2, "Linguistics Letters and Arts", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo3-1');
 		  imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
              }
@@ -233,7 +233,7 @@ function make_y_gridlines() {
 	          svg.append("g")
 		    .attr("class", "y axis")
 		    .call(yAxis)
-		    .style("font-size", "14px") 
+		    .style("font-size", "16px") 
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
