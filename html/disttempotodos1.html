@@ -122,12 +122,12 @@
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
 	     d3.select("svg").remove();
-	     d3.select("svg").remove 'corpo1-1');
-                  imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo2-1');();
+	     d3.select("svg").remove();
              
              if(idioma == 2)
              {
-		  imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv",
+		  imprimeGrafico(2, "Applied and Social Sciences", "../files/at_cienciassociaisaplicadas"+idioma+".csv", 'corpo1-1');
+                  imprimeGrafico(2, "Humanities", "../files/at_cienciashumanas"+idioma+".csv", 'corpo2-1');
                   imprimeGrafico(2, "Linguistics Letters and Arts", "../files/at_linguisticaletraseartes"+idioma+".csv", 'corpo3-1');
 		  imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo5');
              }
@@ -227,8 +227,6 @@ function make_y_gridlines() {
                     .attr("transform", "translate(0," + height + ")")
                     .call(xAxis)		     
 		    .style("font-size", "20px") ;
-
-
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
