@@ -402,7 +402,7 @@
         .style("fill",function(d){return dataset["colors"][d.colorIndex];})
 
     rect.append("text").text(function(d) {return d.y+"%";})
-       .attr("x", function(d, i, j) { return 40+(x(d.month) + x.rangeBand() / n * j); })
+       .attr("x", function(d, i, j) { return 30+(x(d.month) + x.rangeBand() / n * j); })
        .attr("y", function(d) {return y(d.y/100)-6;})
        .attr("text-anchor", "middle")
        .style("font-size", "16px");
@@ -417,7 +417,7 @@
     svg.append("g")
         .attr("class", "y axis")
 	.call(yAxis)
-	.style("font-size", "12px") 
+	.style("font-size", "11px") 
         .append("text")
 	.attr("transform", "rotate(-90)")
 	.attr("y", 6)
