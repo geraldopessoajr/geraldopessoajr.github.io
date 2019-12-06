@@ -424,7 +424,7 @@
 	    .attr("x", (width / 2))             
 	    .attr("y", 0 - (margin.top / 2))
 	    .attr("text-anchor", "middle")  
-	    .style("font-size", "20px") 
+	    .style("font-size", "24px") 
 	    .text(arquivo);
 
 	   /* // add legend
@@ -501,7 +501,7 @@
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+54})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  50+32;})
-                    .style("font-size", "24px")              
+                    .style("font-size", "22px")              
 		    .text(function(d) {return d.type;});
                                       
 	     });
