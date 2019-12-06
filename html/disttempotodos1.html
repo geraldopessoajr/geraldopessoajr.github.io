@@ -226,8 +226,9 @@ function make_y_gridlines() {
                   svg.append("g")
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
-                    .call(xAxis)		     
-		    .style("font-size", "24px") ;
+		    .style("font-size", "24px")
+                    .call(xAxis);		
+		     
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
