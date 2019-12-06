@@ -175,15 +175,15 @@
 
                  legend.append('rect')                                      // NEW
                     .attr("x", function(){return margin.right})
-		    .attr("y", function(d, i){return i * 30;})
-                    .attr('width', 30)                          // NEW
-                    .attr('height', 30)                         // NEW
+		    .attr("y", function(d, i){return i * 26;})
+                    .attr('width', 26)                          // NEW
+                    .attr('height', 26)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                                                
-		    .attr('x', function(){return margin.right+34})              
-		    .attr("y", function(d, i){return i * 30+22;})
+		    .attr('x', function(){return margin.right+30})              
+		    .attr("y", function(d, i){return i * 26+22;})
                     .style("font-size", "16px")               
 		    .text(function(d) {return d.great_area1;});
                                       
