@@ -260,7 +260,7 @@ function make_y_gridlines() {
 		      .data(dataset["colors"])
 		      .enter()
 		      .append("rect")
-		      .attr("x", function(d, i){return margin.right+24})
+		      .attr("x", function(d, i){return margin.right+20})
 		      .attr("y", function(d, i){return (i *  36)+25;})
 		      .attr("width", 36)
 		      .attr("height", 36)		
@@ -273,7 +273,7 @@ function make_y_gridlines() {
 		      .enter()
 		    .append("text")
 		    .attr("x", function(d, i){return margin.right+65})
-		    .attr("y", function(d, i){return (i *  36+9)+38;})           
+		    .attr("y", function(d, i){return (i *  36+9)+42;})           
 		    .style("font-size", "22px")
 		    .text(function(d){return d});
                                       
