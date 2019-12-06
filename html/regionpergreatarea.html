@@ -145,14 +145,14 @@
 	function imprimeLegenda(arquivo, divsvg)
         {
 
-             var legendRectSize = 25;                              
+             var legendRectSize = 18;                              
              
              var legendSpacing = 4; 
              
              var color = d3.scale.ordinal(d3.schemeCategory20b);
  
              
-             var margin = {top: 30, right: 0, bottom: 30, left: 0},
+             var margin = {top: 10, right: 0, bottom: 30, left: 0},
 			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
 			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
@@ -171,26 +171,20 @@
 		    .data(dataset)                                   
 		    .enter()                                                
 		    .append('g')                                            
-		    .attr('class', 'legend')                                
-		    .attr('transform', function(d, i) {                     
-		       var height = legendRectSize + legendSpacing;          
-		       var offset =  height * color.domain().length / 2;     
-		       var horz = legendRectSize;                       
-		       var vert = i * height - offset;                       
-		       return 'translate(' + horz + ',' + vert + ')';        
-		       });
+		    .attr('class', 'legend');
 
                  legend.append('rect')                                      // NEW
-                    .attr('width', legendRectSize)                          // NEW
-                    .attr('height', legendRectSize)                         // NEW
-		    .attr("x", function(d, i){return margin.right+5})
-		    .attr("y", function(d, i){return (i *  25);})
+                    .attr("x", function(d, i, k){k = (i%4)*300; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k * 30;})
+                    .attr('width', 30)                          // NEW
+                    .attr('height', 30)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
-		 legend.append('text')                                     
-		    .attr('x', 30)              
-		    .attr('y', function(d, i){return (i *  36+9)+42;})              
+		 legend.append('text')                                                                
+		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k * 30+22;})
+                    .style("font-size", "16px")               
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
