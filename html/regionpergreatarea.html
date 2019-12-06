@@ -183,8 +183,8 @@
                  legend.append('rect')                                      // NEW
                     .attr('width', legendRectSize)                          // NEW
                     .attr('height', legendRectSize)                         // NEW
-		    .attr("x", function(d, i){return margin.right+20})
-		    .attr("y", function(d, i){return (i *  25)+5;})
+		    .attr("x", function(d, i){return margin.right+5})
+		    .attr("y", function(d, i){return (i *  25);})
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
