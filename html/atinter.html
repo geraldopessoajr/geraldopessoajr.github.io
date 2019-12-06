@@ -137,7 +137,7 @@
 	function imprimeGrafico(idioma, arquivo, divsvg, dataset)
         {
 
-             var margin = {top: 30, right: 30, bottom: 30, left: 50},
+             var margin = {top: 40, right: 30, bottom: 30, left: 60},
 			  width = document.getElementById(divsvg).offsetWidth - (margin.left) - (margin.right),
 			  height = document.getElementById(divsvg).offsetHeight - (margin.top) - (margin.bottom);
 
@@ -218,20 +218,20 @@ function make_y_gridlines() {
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
                     .call(xAxis)		     
-		    .style("font-size", "20px");
+		    .style("font-size", "22px");
 
 
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
 		    .call(yAxis)     
-		    .style("font-size", "14px")
+		    .style("font-size", "22px")
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end") 
-		    .style("font-size", "20px") 
+		    .style("font-size", "22px") 
 		    .text(function(){if(idioma == 1){return "";}else{return "Average of Interdisciplinary Publications"}});
 
 
