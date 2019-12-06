@@ -293,16 +293,16 @@ function make_y_gridlines() {
 
                  legend.append('rect')                                      // NEW
                     .attr("x", function(d, i, k){k = (i%4)*320; return margin.right+k})
-		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  40;})
-                    .attr('width', 40)                          // NEW
-                    .attr('height', 40)                         // NEW
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  36;})
+                    .attr('width', 36)                          // NEW
+                    .attr('height', 36)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%4)*320; return margin.right+k+44})              
-		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  40+30;})
-                    .style("font-size", "24px")              
+		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  36+24;})
+                    .style("font-size", "22px")              
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
