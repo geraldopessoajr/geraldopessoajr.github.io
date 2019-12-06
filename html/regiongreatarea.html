@@ -166,7 +166,7 @@
 		       //});
 
                  legend.append('rect')                                      // NEW
-                    .attr("x", function(d, i, k){k = (i%4)*312; if(i%4 == 1){k = (i%4)*300;} if(i%4 == 3){k = (i%4)*288;} return margin.right+k})
+                    .attr("x", function(d, i, k){k = (i%4)*315; if(i%4 == 1){k = (i%4)*305;} if(i%4 == 3){k = (i%4)*290;} return margin.right+k})
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  36;})
                     .attr('width', 36)                          // NEW
                     .attr('height', 36)                         // NEW
@@ -174,7 +174,7 @@
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){k = (i%4)*312; if(i%4 == 1){k = (i%4)*300;} if(i%4 == 3){k = (i%4)*288;} return margin.right+k+40})              
+		    .attr('x', function(d, i, k){k = (i%4)*315; if(i%4 == 1){k = (i%4)*305;} if(i%4 == 3){k = (i%4)*290;} return margin.right+k+40})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  36+25;})
                     .style("font-size", "22px")              
 		    .text(function(d) {return d.great_area1;});
