@@ -231,7 +231,8 @@ function make_y_gridlines() {
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
-		    .call(yAxis)
+		    .call(yAxis)	     
+		    .style("font-size", "14px")
 		    .append("text")
 		    .attr("transform", "rotate(-90)")
 		    .attr("y", 6)
