@@ -122,14 +122,6 @@ path {
   display: none;
 }
 
-.x.axis text {
-   font-size: 16px;
-}
-
-.y.axis text {
-   font-size: 16px;
-}
-
 .d3-tip {
   line-height: 1;
   font-weight: bold;
