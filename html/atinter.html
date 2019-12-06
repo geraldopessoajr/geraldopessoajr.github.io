@@ -261,9 +261,9 @@ function make_y_gridlines() {
 		      .enter()
 		      .append("rect")
 		      .attr("x", function(d, i){return margin.right+20})
-		      .attr("y", function(d, i){return (i *  30)+25;})
-		      .attr("width", 30)
-		      .attr("height", 30)		
+		      .attr("y", function(d, i){return (i *  36)+25;})
+		      .attr("width", 36)
+		      .attr("height", 36)		
 		      .style("fill", function(d) {
 			return d;
 		      })
@@ -273,8 +273,8 @@ function make_y_gridlines() {
 		      .enter()
 		    .append("text")
 		    .attr("x", function(d, i){return margin.right+65})
-		    .attr("y", function(d, i){return (i *  30+9)+38;})           
-		    .style("font-size", "16px")
+		    .attr("y", function(d, i){return (i *  36+9)+38;})           
+		    .style("font-size", "22px")
 		    .text(function(d){return d});
                                       
 	     });
