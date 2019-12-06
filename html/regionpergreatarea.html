@@ -175,7 +175,7 @@
 
                  legend.append('rect')                                      // NEW
                     .attr("x", function(){return margin.right})
-		    .attr("y", function(d, i){return i * 24;})
+		    .attr("y", function(d, i){return i * 24+6;})
                     .attr('width', 24)                          // NEW
                     .attr('height', 24)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
@@ -183,7 +183,7 @@
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                                                
 		    .attr('x', function(){return margin.right+30})              
-		    .attr("y", function(d, i){return i * 24+16;})
+		    .attr("y", function(d, i){return i * 24+22;})
                     .style("font-size", "14px")               
 		    .text(function(d) {return d.great_area1;});
                                       
