@@ -227,7 +227,7 @@ function make_y_gridlines() {
                     .attr("class", "x axis")
                     .attr("transform", "translate(0," + height + ")")
                     .call(xAxis)		     
-		    .style("font-size", "20px") ;
+		    .style("font-size", "24px") ;
 //definido o dominio y do gráfico
 	          svg.append("g")
 		    .attr("class", "y axis")
@@ -238,7 +238,7 @@ function make_y_gridlines() {
 		    .attr("y", 6)
 		    .attr("dy", ".71em")
 		    .style("text-anchor", "end")		    
-		    .style("font-size", "10px") 
+		    .style("font-size", "14px") 
 		    .text(function(){if(idioma == 1){return "";}else{return ""}});
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
@@ -246,7 +246,7 @@ function make_y_gridlines() {
 		    .attr("x", (width / 2))             
 		    .attr("y", 0 - (margin.top / 2))
 		    .attr("text-anchor", "middle")  
-		    .style("font-size", "20px") 
+		    .style("font-size", "28px") 
 		    .text(great_area);
                                       
 	     });
@@ -301,7 +301,7 @@ function make_y_gridlines() {
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+34})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  30+22;})
-                    .style("font-size", "16px")              
+                    .style("font-size", "20px")              
 		    .text(function(d) {return d.great_area1;});
                                       
 	     });
