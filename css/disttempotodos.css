@@ -106,8 +106,6 @@ path {
        fill: none;
 }
 
-.axis { font: 20px; }
-
 .axis path,
 .axis line {
   fill: none;
@@ -122,6 +120,14 @@ path {
 
 .x.axis path {
   display: none;
+}
+
+.x.axis text {
+   font-size: 16px;
+}
+
+.y.axis text {
+   font-size: 16px;
 }
 
 .d3-tip {
