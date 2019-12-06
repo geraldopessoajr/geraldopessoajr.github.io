@@ -411,13 +411,13 @@
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis)
-	    .style("font-size", "20px") ;
+	    .style("font-size", "22px") ;
 
 //definido o dominio y do gráfico
     svg.append("g")
         .attr("class", "y axis")
 	.call(yAxis)
-	.style("font-size", "11px");
+	.style("font-size", "16px");
 
 //Título do Gráfico *tittle* é adicionado aqui no svg
         svg.append("text")
@@ -501,7 +501,7 @@
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%4)*300; return margin.right+k+54})              
 		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k *  50+32;})
-                    .style("font-size", "20px")              
+                    .style("font-size", "24px")              
 		    .text(function(d) {return d.type;});
                                       
 	     });
