@@ -1,6 +1,6 @@
 region,color,area,estados,populacao,pib,ppg,pesquisador,legenda
-North,"#4daf4a","Area (km²): 3,8M",7,"Population: 18,18M","GDP (US$): 86.67M","NGP7: 0","NRS: 1.931", NGP7 - Number of Graduate
-Northeast,"#377eb8","Area (km²): 1,5M",9,"Population: 56,76M","GDP (US$): 230.82M","NGP7: 9","NRS: 21.327", Programs rated 7 by CAPES. 
-Central-West,"#e41a1c","Area (km²): 1,6M",3,"Population: 16,08M","GDP (US$): 126.66M","NGP7: 6","NRS: 9.480",
-Southeast,"#984ea3","Area (km²): 0,9M",4,"Population: 87,71M","GDP (US$): 856.39M","NGP7: 143","NRS: 76.232",NRS - Number of Researchers.
-South,"#ff7f00","Area (km²): 0,5M",3,"Population: 29,75M","GDP (US$): 274.23M","NGP7: 32","NRS: 27.741",
+North,"#4daf4a","Area (km²): 3,8M",7,"Population: 18,18M","GDP (US$): 86.67M","NGP7: 0 (0.0%)","NRS: 1.931", NGP7 - Number of Graduate
+Northeast,"#377eb8","Area (km²): 1,5M",9,"Population: 56,76M","GDP (US$): 230.82M","NGP7: 9 (4.7%)","NRS: 21.327", Programs rated 7 by CAPES. 
+Central-West,"#e41a1c","Area (km²): 1,6M",3,"Population: 16,08M","GDP (US$): 126.66M","NGP7: 6 (3.2%)","NRS: 9.480",
+Southeast,"#984ea3","Area (km²): 0,9M",4,"Population: 87,71M","GDP (US$): 856.39M","NGP7: 143 (75.3%)","NRS: 76.232",NRS - Number of Researchers.
+South,"#ff7f00","Area (km²): 0,5M",3,"Population: 29,75M","GDP (US$): 274.23M","NGP7: 32 (16.8%)","NRS: 27.741",
