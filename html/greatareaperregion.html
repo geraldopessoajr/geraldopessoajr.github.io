@@ -91,14 +91,15 @@
 	  <div id="corpo1" style="display: flex;justify-content: space-between;">
 	    <div id="corpo1-1"></div>  
 	    <div id="corpo1-2"></div>
-            <div id="corpo1-3"></div>
+            <div id="corpo1-3"></div>  
+            <div id="corpo1-4"></div>
 	  </div>
 
 	  <div id="corpo2" style="display: flex;justify-content: space-between;">
 	    <div id="corpo2-1"></div>  
 	    <div id="corpo2-2"></div>
-          <div id="corpo2-3">
-	    </div>
+            <div id="corpo2-3"></div>
+            <div id="corpo2-4"></div>
 	  </div>
 	  </div>
   </div>
@@ -117,21 +118,27 @@
              if(idioma == 2)
              {
 
-                document.getElementById("corpo1-1").innerHTML = "<h5>Central West</h5><br> <center><img src=\"../img/CO.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo1-3").innerHTML = "<h5>Northeast</h5><br> <center><img src=\"../img/ND.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo1-2").innerHTML = "<h5>North</h5><br> <center><img src=\"../img/N.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo2-2").innerHTML = "<h5>Southeast</h5><br> <center><img src=\"../img/SD.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo2-1").innerHTML = "<h5>South</h5><br> <center><img src=\"../img/S.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
+                document.getElementById("corpo1-1").innerHTML = "<h5>Agrarian Sciences</h5><br> <center><img src=\"../img/CA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-2").innerHTML = "<h5>Applied and Social Sciences</h5><br> <center><img src=\"../img/CSA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-3").innerHTML = "<h5>Biological Sciences</h5><br> <center><img src=\"../img/CB.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-4").innerHTML = "<h5>Engineering</h5><br> <center><img src=\"../img/E.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-1").innerHTML = "<h5>Exact and Earth Sciences</h5><br> <center><img src=\"../img/CET.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-2").innerHTML = "<h5>Health Sciences</h5><br> <center><img src=\"../img/CS.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-3").innerHTML = "<h5>Humanities</h5><br> <center><img src=\"../img/CH.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-4").innerHTML = "<h5>Linguistics, Letters and Arts</h5><br> <center><img src=\"../img/LLA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                //imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
              }
              else if(idioma == 1)
              {
-                document.getElementById("corpo1-1").innerHTML = "<h5>Centro Oeste</h5><br> <center><img src=\"../img/CO.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo1-2").innerHTML = "<h5>Nordeste</h5><br> <center><img src=\"../img/ND.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo1-3").innerHTML = "<h5>Norte</h5><br> <center><img src=\"../img/N.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo2-1").innerHTML = "<h5>Sudeste</h5><br> <center><img src=\"../img/SD.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                document.getElementById("corpo2-2").innerHTML = "<h5>Sul</h5><br> <center><img src=\"../img/S.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
-                imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
+                document.getElementById("corpo1-1").innerHTML = "<h5>Ciências Agrárias</h5><br> <center><img src=\"../img/CA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-2").innerHTML = "<h5>Ciências Biológicas</h5><br> <center><img src=\"../img/CB.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-3").innerHTML = "<h5>Ciências da Saúde</h5><br> <center><img src=\"../img/CS.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo1-4").innerHTML = "<h5>Ciências Exatas e da Terra</h5><br> <center><img src=\"../img/CET.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-1").innerHTML = "<h5>Ciências Humanas</h5><br> <center><img src=\"../img/CH.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-2").innerHTML = "<h5>Ciências Sociais e Aplicadas</h5><br> <center><img src=\"../img/CSA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-3").innerHTML = "<h5>Engenharias</h5><br> <center><img src=\"../img/E.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                document.getElementById("corpo2-4").innerHTML = "<h5>Linguística, Letras e Artes</h5><br> <center><img src=\"../img/LLA.png\" alt=\"Collaboration Patterns between Brazilian Geographic Regions\" width=256 height=256></center>";
+                //imprimeLegenda("../files/coautoria"+idioma+"legenda.csv", 'corpo2-3');
              }      
 
         }
