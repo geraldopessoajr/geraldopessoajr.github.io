@@ -97,7 +97,7 @@
 
 	  <div id="corpo2" style="display: flex;justify-content: space-between;">
 	    <div id="corpo2-1"></div>  
-	    <div id="corpo2-2"></br></br></div>
+	    <div id="corpo2-2"></br></div>
 	  </div>
   </div>
 
@@ -174,7 +174,7 @@
 
                  legend.append('rect')                                      // NEW
                     .attr("x", function(d, i, k){k = (i%2)*350; return margin.right+k})
-		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {if(i < 4){k=1;} else {if(i < 6){k=2;} else {k =3;}}} return k * 45;})
+		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {if(i < 4){k=1;} else {if(i < 6){k=2;} else {k =3;}}} return k * 50;})
                     .attr('width', 30)                          // NEW
                     .attr('height', 30)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
@@ -182,7 +182,7 @@
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
 		    .attr('x', function(d, i, k){k = (i%2)*350; return margin.right+k+34})              
-		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {if(i < 4){k=1;} else {if(i < 6){k=2;} else {k =3;}}} return k * 45+22;})
+		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {if(i < 4){k=1;} else {if(i < 6){k=2;} else {k =3;}}} return k * 50+22;})
                     .style("font-size", "16px")              
 		    .text(function(d) {return d.great_area1;});
                                       
