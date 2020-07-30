@@ -173,18 +173,18 @@
 		    .attr('class', 'legend');
 
                  legend.append('rect')                                      // NEW
-                    .attr("x", function(d, i, k){k = (i%4)*200; return margin.right+k})
-		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k * 30;})
+                    .attr("x", function(d, i, k){k = (i%2)*200; return margin.right+k})
+		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {k =1;} return k * 30;})
                     .attr('width', 30)                          // NEW
                     .attr('height', 30)                         // NEW
                     .style('fill', function(d) {return d.color})            // NEW
                     .style('stroke', color);                                // NEW                                                     
 //Os dizeres que serão mostrado na legenda, bem como seu espaço e posição		  
 		 legend.append('text')                                     
-		    .attr('x', function(d, i, k){k = (i%4)*200; return margin.right+k+34})              
-		    .attr("y", function(d, i, k){if(i < 4){k=0;} else {k =1;} return k * 30+22;})
+		    .attr('x', function(d, i, k){k = (i%2)*200; return margin.right+k+34})              
+		    .attr("y", function(d, i, k){if(i < 2){k=0;} else {k =1;} return k * 30+22;})
                     .style("font-size", "16px")              
-		    .text(function(d) {return d.region_1;});
+		    .text(function(d) {return d.great_area1;});
                                       
 	     });
 	}
