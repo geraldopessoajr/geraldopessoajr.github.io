@@ -2,5 +2,5 @@ region,color,area,estados,populacao,pib,ppg,pesquisador,legenda
 North,"#4daf4a","Area (km²): 3.85M",7,"Population: 18.67M","GDP (US$): 60.8B","NGP7: 0 (0.0%)","NR: 1.931", NGP7 - Number of Graduate
 Northeast,"#377eb8","Area (km²): 1.55M",9,"Population: 57.37M","GDP (US$): 270.4B","NGP7: 9 (4.7%)","NR: 21.327", Programs rated 7 by CAPES. 
 Central-West,"#e41a1c","Area (km²): 1.60M",3,"Population: 16.50M","GDP (US$): 187.0B","NGP7: 6 (3.2%)","NR: 9.480",
-Southeast,"#984ea3","Area (km²): 0.92M",4,"Population: 89.01M","GDP (US$): 1,001.7B","NGP7: 143 (75.3%)","NR: 76.232",NR - Number of Researchers.
+Southeast,"#984ea3","Area (km²): 0.92M",4,"Population: 89.01M","GDP (US$): 1.0T","NGP7: 143 (75.3%)","NR: 76.232",NR - Number of Researchers.
 South,"#ff7f00","Area (km²): 0.57M",3,"Population: 30.19M","GDP (US$): 321.8B","NGP7: 32 (16.8%)","NR: 27.741",
